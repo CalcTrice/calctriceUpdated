@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap");
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+:root {
+  --fs-800: 8rem;
+  --fs-buttons: 1.4rem;
+  --fs-anchors: 1.2rem;
+  --wgt-800: 800;
+  --wgt-700: 700;
+  --wgt-600: 600;
+  --wgt-500: 500;
+  --wgt-400: 400;
+  --wgt-300: 300;
+  --clr-yellow-1: #ffb000;
+  --clr-yellow-2: #ffd066;
+  --clr-yellow-3: #fff7e5;
+  -clr-black-1: black;
+  -clr-black-2: rgba(2, 1, 1, 0.8);
+  -clr-black-3: rgba(0, 0, 0, 0.6);
+  -clr-black-4: rgba(0, 0, 0, 0.4);
+  -clr-black-5: rgba(0, 0, 0, 0.2);
+  -clr-white-1: white;
+  -clr-white-2: rgba(255, 255, 255, 0.8);
+  -clr-white-3: rgba(255, 255, 255, 0.6);
+  -clr-white-4: rgba(255, 255, 255, 0.4);
+  -clr-white-5: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --fs-800: 6rem;
+    --fs-buttons: 1.4rem;
+    --fs-anchors: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --fs-800: 4rem;
+    --fs-buttons: 1.4rem;
+    --fs-anchors: 1.2rem;
+  }
+}
+
+button.button {
+  color: #ffb000;
+  font-family: "Poppins";
+  text-transform: capitalize;
+  padding: 20px 20px;
+  font-weight: wgt(--wgt-500);
+  font-size: var(--fs-buttons);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat";
+  font-size: var(--fs-800);
+  font-weight: var(--wgt-800);
+  color: #ffb000;
+  text-transform: uppercase;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+span.regular {
+  -webkit-text-stroke: 2px #ffb000;
+}
+
+span.outline {
+  letter-spacing: -25px;
+  -webkit-text-stroke: 2px #ffb000;
+  -webkit-text-fill-color: #ffb000;
+  fill: #ffb000;
+}
+
+span.heading-hover {
+  letter-spacing: 2px;
+}
+
+#landingPage {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+#landingPage canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+}
+
+.CTA {
+  place-self: flex-start center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.CTA .box {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 33.33%;
+  height: 60px;
+  border: 2px solid #ffb000;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/*# sourceMappingURL=main.css.map */

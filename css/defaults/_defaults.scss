@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+	//Font Sizes
+	--fs-800: 8rem;
+	--fs-buttons: 1.4rem;
+	--fs-anchors: 1.2rem;
+
+	//Font weights
+	--wgt-800: 800;
+	--wgt-700: 700;
+	--wgt-600: 600;
+	--wgt-500: 500;
+	--wgt-400: 400;
+	--wgt-300: 300;
+	//Colors
+	--clr-yellow-1: #ffb000;
+	--clr-yellow-2: #ffd066;
+	--clr-yellow-3: #fff7e5;
+
+	-clr-black-1: rgba(0, 0, 0, 1);
+	-clr-black-2: rgba(2, 1, 1, 0.8);
+	-clr-black-3: rgba(0, 0, 0, 0.6);
+	-clr-black-4: rgba(0, 0, 0, 0.4);
+	-clr-black-5: rgba(0, 0, 0, 0.2);
+
+	-clr-white-1: rgba(255, 255, 255, 1);
+	-clr-white-2: rgba(255, 255, 255, 0.8);
+	-clr-white-3: rgba(255, 255, 255, 0.6);
+	-clr-white-4: rgba(255, 255, 255, 0.4);
+	-clr-white-5: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and(max-width: 992px) {
+	:root {
+		--fs-800: 6rem;
+		--fs-buttons: 1.4rem;
+		--fs-anchors: 1.2rem;
+	}
+}
+@media screen and(max-width: 700px) {
+	:root {
+		--fs-800: 4rem;
+		--fs-buttons: 1.4rem;
+		--fs-anchors: 1.2rem;
+	}
+}

@@ -1,0 +1,11 @@
+button.button {
+	color: #ffb000;
+	font-family: "Poppins";
+	text-transform: capitalize;
+	padding: 20px 20px;
+	font-weight: wgt(--wgt-500);
+	font-size: var(--fs-buttons);
+	background: none;
+	border: none;
+	cursor: pointer;
+}
