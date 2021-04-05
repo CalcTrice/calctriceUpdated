@@ -1,3 +1,66 @@
+const navToggler = function () {
+    const navIcon = document.querySelector('.burger');
+    const closeNav = document.querySelector('.close-nav');
+    const navLinks = document.querySelector('.nav-links');
+
+    let tl = gsap.timeline();
+
+    navIcon.addEventListener('click', function () {
+        navLinks.classList.add('show');
+        tl.to('.blurSlate', { scaleX: 0.75, duration: 0.7, transformOrigin: 'left' }, "=-0.2")
+    });
+    closeNav.addEventListener('click', function () {
+        navLinks.classList.remove('show');
+        tl.to('.blurSlate', { scaleX: 0, duration: .7, transformOrigin: 'left' })
+    });
+}
+navToggler()
+const homeGsap = function () {
+
+    let tl = gsap.timeline();
+    tl
+        .to('h1 div', { opacity: 1, y: '0%', duration: 0.5, stagger: 0.2, ease: 'power4.out' }, '+=1')
+        .to("span.heading-hover", { "-webkit-text-fill-color": 'transparent', delay: 0.1, stagger: 0.05, ease: "power4.out" })
+        .from('.CTA button', { y: '100%', opacity: 0, stagger: 0.1, duration: 0.5, ease: "bounce.out", stagger: 0.1 })
+        .from('.box', { opacity: 0, duration: 0.5 }, "-=0.2")
+        .from("canvas", { scale: 0, opacity: 0, duration: 0.5, ease: 'power.out' }, "-=0.5")
+        .from('nav', { opacity: 0, duration: 0.2 })
+        .from('footer.footer-landing', { opacity: 0, duration: 0.2 }, "-=0.2")
+}
+
+const buttonAnimations = function () {
+    const button1 = document.querySelector('.button-1');
+    const button2 = document.querySelector('.button-2');
+    const button3 = document.querySelector('.button-3');
+
+    const box = document.querySelector(".box");
+
+    button1.addEventListener('mouseenter', function () {
+        box.style.transition = "0.3s ease-out";
+        box.style.left = "0%";
+        box.style.transform = "translateX(-2%)"
+    })
+    button1.addEventListener('mouseleave', function () {
+        box.style.transition = "0.3s ease-out";
+        box.style.left = "50%";
+        box.style.transform = "translateX(-52%)"
+    })
+
+    button3.addEventListener('mouseenter', function () {
+        box.style.transition = "0.3s ease-out";
+        box.style.left = "100%";
+        box.style.transform = "translateX(-102%)"
+    })
+    button3.addEventListener('mouseleave', function () {
+        box.style.transition = "0.3s ease-out";
+        box.style.left = "50%";
+        box.style.transform = "translateX(-52%)"
+    })
+
+
+
+}
+
 const particleJS = function () {
     particlesJS("landingPage", {
         particles: {
@@ -65,7 +128,7 @@ const particleJS = function () {
     count_particles = document.querySelector(".js-count-particles");
     update = function () {
         if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+
         }
         requestAnimationFrame(update);
     };
@@ -73,44 +136,19 @@ const particleJS = function () {
 
 }
 
+const sideNavGsap = function () {
+    const navIcon = document.querySelector('.burger');
+    let tl = gsap.timeline();
+
+    navIcon.addEventListener('click', function () {
+        tl
+            .from('.submenu-links ', { y: 50, opacity: 0, duration: 0.5, stagger: 0.15 });
+
+    })
+}
+
+navToggler()
 particleJS();
-
-let tl = gsap.timeline();
-
-
-
-tl
-    .from('.regular', { opacity: 0, y: "100px", duration: 0.2, stagger: 0.1, delay: 1 },)
-    .from("span.heading-hover", { y: "100px", opacity: 0, duration: 0.2, stagger: 0.1, ease: "power4.out" })
-    .to("span.heading-hover", { "-webkit-text-fill-color": 'transparent', delay: 0.1, stagger: 0.05, ease: "power4.out" })
-    .from('.CTA button', { y: '100%', opacity: 0, stagger: 0.1, duration: 0.5, ease: "bounce.out", stagger: 0.1 })
-    .from('.box', { opacity: 0, duration: 0.5 }, "-=0.2")
-    .from("canvas", { scale: 0, opacity: 0, duration: 0.5 }, "-=0.5")
-
-
-
-const button1 = document.querySelector('.button-1');
-const button3 = document.querySelector('.button-3');
-const box = document.querySelector(".box");
-
-button1.addEventListener('mouseenter', function () {
-    box.style.transition = "0.2s ease-out";
-    box.style.left = "0%";
-    box.style.transform = "translateX(0%)"
-})
-button1.addEventListener('mouseleave', function () {
-    box.style.transition = "0.2s ease-out";
-    box.style.left = "50%";
-    box.style.transform = "translateX(-50%)"
-})
-
-button3.addEventListener('mouseenter', function () {
-    box.style.transition = "0.2s ease-out";
-    box.style.left = "100%";
-    box.style.transform = "translateX(-100%)"
-})
-button3.addEventListener('mouseleave', function () {
-    box.style.transition = "0.2s ease-out";
-    box.style.left = "50%";
-    box.style.transform = "translateX(-50%)"
-})
+homeGsap();
+sideNavGsap();
+buttonAnimations();

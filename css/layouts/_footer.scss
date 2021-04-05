@@ -1,0 +1,33 @@
+footer.footer-landing {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 2vh 4vw;
+	ul {
+		flex: 1;
+		list-style-type: none;
+		display: flex;
+		min-width: 300px;
+		li {
+			padding: 20px 20px 20px 0px;
+		}
+		a {
+			font-weight: 300;
+		}
+	}
+	p {
+		min-width: 300px;
+
+		padding: 20px 0px;
+		flex: 1;
+		text-align: right;
+		font-family: $poppins;
+		color: var(--clr-yellow-1);
+		font-size: var(--fs-anchors);
+		font-weight: 300;
+	}
+}
