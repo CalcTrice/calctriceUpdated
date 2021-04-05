@@ -36,8 +36,9 @@ const homeGsap = function () {
         .to('.loading-text', { display: 'none' })
         .to('.company-name', { display: 'block' })
         .to('.loading-animation', { scaleX: 0, duration: 0.6, transformOrigin: "top " })
-        .to('.loader', { scaleY: 0, duration: 1, opacity: 0, ease: 'power4.out', transformOrigin: 'bottom' }, "+=1")
-        .to('h1 div', { opacity: 1, y: '0%', duration: 1, stagger: 0.2, ease: 'power4.out' }, '+=0.2')
+        .to('.loader', { scaleY: 0, duration: 1, opacity: 0, ease: 'power4.out', transformOrigin: 'top' }, "+=1")
+
+        .to('h1 div', { opacity: 1, y: '0%', duration: 1, stagger: 0.2, ease: 'power4.out' }, '-=0.4')
         .to("span.heading-hover", { "-webkit-text-fill-color": 'transparent', delay: 0.1, stagger: 0.05, ease: "power4.out" })
         .from('.CTA button', { y: '100%', opacity: 0, stagger: 0.1, duration: 0.5, ease: "bounce.out", stagger: 0.1 })
         .from('.box', { opacity: 0, duration: 0.5 }, "-=0.2")
