@@ -17,6 +17,8 @@ html {
 
 :root {
   --fs-800: 8rem;
+  --fs-400: 3rem;
+  --fs-300: 2rem;
   --fs-200: 1.6rem;
   --fs-buttons: 1.4rem;
   --fs-anchors: 1.2rem;
@@ -49,6 +51,51 @@ html {
     --fs-buttons: 1.4rem;
     --fs-anchors: 1.2rem;
   }
+}
+
+.loader {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-black-1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader h4.loading-text {
+  color: var(--clr-white-1);
+  font-size: var(--fs-400);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+.loader h4.company-name {
+  color: var(--clr-white-1);
+  font-size: var(--fs-400);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  display: none;
+}
+
+.loader .loading-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--clr-yellow-1);
+  -webkit-transform: translate(-50%, -50%) scaleX(0);
+          transform: translate(-50%, -50%) scaleX(0);
 }
 
 h1 {

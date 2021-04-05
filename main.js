@@ -1,3 +1,9 @@
+// const loadingTl = gsap.timeline();
+// loadingTl
+
+
+
+
 const navToggler = function () {
     const navIcon = document.querySelector('.burger');
     const closeNav = document.querySelector('.close-nav');
@@ -17,9 +23,21 @@ const navToggler = function () {
 navToggler()
 const homeGsap = function () {
 
-    let tl = gsap.timeline();
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "body",
+            start: "top bottom",
+            end: "bottom center",
+        }
+    })
     tl
-        .to('h1 div', { opacity: 1, y: '0%', duration: 0.5, stagger: 0.2, ease: 'power4.out' }, '+=1')
+        .from('.loading-text', { opacity: 0, duration: 0.4 }, "+=1")
+        .to('.loading-animation', { scaleX: 5, duration: 0.6, transformOrigin: "top " }, "+=1")
+        .to('.loading-text', { display: 'none' })
+        .to('.company-name', { display: 'block' })
+        .to('.loading-animation', { scaleX: 0, duration: 0.6, transformOrigin: "top " })
+        .to('.loader', { scaleY: 0, duration: 1, opacity: 0, ease: 'power4.out', transformOrigin: 'bottom' }, "+=1")
+        .to('h1 div', { opacity: 1, y: '0%', duration: 1, stagger: 0.2, ease: 'power4.out' }, '+=0.2')
         .to("span.heading-hover", { "-webkit-text-fill-color": 'transparent', delay: 0.1, stagger: 0.05, ease: "power4.out" })
         .from('.CTA button', { y: '100%', opacity: 0, stagger: 0.1, duration: 0.5, ease: "bounce.out", stagger: 0.1 })
         .from('.box', { opacity: 0, duration: 0.5 }, "-=0.2")
