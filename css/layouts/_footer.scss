@@ -1,7 +1,6 @@
 footer.footer-landing {
-	position: absolute;
+	position: relative;
 	z-index: 2;
-	bottom: 0;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -16,7 +15,7 @@ footer.footer-landing {
 			padding: 20px 20px 20px 0px;
 		}
 		a {
-			font-weight: 300;
+			font-weight: 400;
 		}
 	}
 	p {
@@ -26,8 +25,8 @@ footer.footer-landing {
 		flex: 1;
 		text-align: right;
 		font-family: $poppins;
-		color: var(--clr-yellow-1);
+		color: var(--clr-black-1);
 		font-size: var(--fs-anchors);
-		font-weight: 300;
+		font-weight: 400;
 	}
 }

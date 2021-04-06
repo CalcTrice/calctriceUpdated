@@ -1,12 +1,15 @@
-#landingPage {
-	background-color: var(--clr-black-1);
+.section {
 	width: 100%;
 	min-height: 100vh;
 	height: auto;
+}
+
+.section-1 {
+	padding-top: 60px;
 	display: grid;
 	place-items: center;
 	position: relative;
-	grid-template-rows: 1fr 7fr 3fr;
+	grid-template-rows: 7fr 4fr;
 	canvas {
 		position: absolute;
 		top: 0;
@@ -15,26 +18,47 @@
 		height: 100%;
 		mix-blend-mode: screen;
 	}
+
+	.CTA {
+		margin-top: 50px;
+		place-self: flex-start center;
+		height: 100%;
+		max-width: 600px;
+		width: auto;
+		display: flex;
+		flex-wrap: wrap;
+
+		align-items: flex-start;
+		position: relative;
+		z-index: 2;
+		.box {
+			z-index: -1;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 200px;
+			height: 60px;
+			border: 2px solid var(--clr-yellow-1);
+			transition: all 0.2s ease-out;
+		}
+	}
 }
 
-.CTA {
-	place-self: flex-start center;
+.heading {
+	height: 20vh;
 	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	height: auto;
-	position: relative;
-	z-index: 2;
-	.box {
-		z-index: -1;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-52%);
-		width: 33.34%;
-		height: 60px;
-		border: 2px solid #ffb000;
-		transition: all 0.2s ease-out;
+}
+.section-2 {
+	.what-we-do-accordion {
+		width: 100%;
 	}
+}
+.section-3 {
+}
+.section-4 {
+	background-color: var(--clr-black-1);
 }

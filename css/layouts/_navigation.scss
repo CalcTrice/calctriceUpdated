@@ -1,23 +1,31 @@
 nav {
 	align-self: flex-start;
 	padding: 2vh 4vw;
-	position: relative;
+	position: fixed;
+	top: 0;
 	z-index: 5;
 	width: 100%;
 	//height: auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	background: transparent;
 	div.logo {
 		flex: 1;
 		//text-transform: uppercase;
-		color: white;
+		color: black;
 		font-size: 2rem;
 		font-family: $poppins;
 		text-align: left;
 		cursor: pointer;
+		font-weight: 700;
 	}
 	ul.nav-links {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		overflow: -moz-scrollbars-none;
+		-ms-overflow-style: none;
 		overflow-y: scroll;
 		padding: 12vh 50px;
 		background: var(--clr-white-1);
@@ -106,7 +114,31 @@ nav {
 	top: 0;
 	width: 100vw;
 	height: 100vh;
-	backdrop-filter: blur(5px);
+	background-color: var(--clr-black-2);
+	backdrop-filter: blur(1px);
 	z-index: 3;
 	transform: scaleX(0);
+
+	.info {
+		width: auto;
+		position: absolute;
+		bottom: 50px;
+		left: 30px;
+		opacity: 1;
+		> * {
+			margin-top: 10px;
+		}
+		.blurSlateLogo {
+			width: auto;
+			color: var(--clr-white-1);
+		}
+		.blurSlateSub {
+			width: auto;
+			color: var(--clr-white-1);
+			font-weight: 400;
+		}
+		.social-links > * {
+			margin-right: 10px;
+		}
+	}
 }

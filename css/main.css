@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap");
 body,
 html {
   width: 100%;
@@ -8,6 +8,34 @@ html {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 1rem;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #ffffff00;
+          box-shadow: inset 0 0 6px #ffffff00;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+::-moz-selection {
+  background-color: var(--clr-yellow-2);
+}
+
+::selection {
+  background-color: var(--clr-yellow-2);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-yellow-2);
+  outline: 1px solid transparent;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +43,16 @@ html {
           box-sizing: border-box;
 }
 
+.Container {
+  width: 100%;
+  height: auto;
+}
+
 :root {
   --fs-800: 8rem;
+  --fs-700: 6rem;
+  --fs-600: 4rem;
+  --fs-500: 2.2rem;
   --fs-400: 3rem;
   --fs-300: 2rem;
   --fs-200: 1.6rem;
@@ -40,6 +76,7 @@ html {
 @media screen and (max-width: 992px) {
   :root {
     --fs-800: 6rem;
+    --fs-700: 4.5rem;
     --fs-buttons: 1.4rem;
     --fs-anchors: 1.2rem;
   }
@@ -47,64 +84,34 @@ html {
 
 @media screen and (max-width: 700px) {
   :root {
-    --fs-800: 4rem;
+    --fs-800: 4.5rem;
+    --fs-700: 4rem;
     --fs-buttons: 1.4rem;
     --fs-anchors: 1.2rem;
   }
 }
 
-.loader {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr-black-1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loader h4.loading-text {
-  color: var(--clr-white-1);
-  font-size: var(--fs-400);
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-}
-
-.loader h4.company-name {
-  color: var(--clr-white-1);
-  font-size: var(--fs-400);
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  display: none;
-}
-
-.loader .loading-animation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  background-color: var(--clr-yellow-1);
-  -webkit-transform: translate(-50%, -50%) scaleX(0);
-          transform: translate(-50%, -50%) scaleX(0);
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+a {
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   position: relative;
   z-index: 2;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: var(--clr-yellow-1);
+  color: var(--clr-black-1);
   font-size: var(--fs-800);
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
   text-align: center;
   height: -webkit-fit-content;
@@ -118,30 +125,47 @@ h1 div {
   opacity: 0;
 }
 
-div.regular {
-  -webkit-text-stroke: 2px var(--clr-yellow-1);
+h2 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--clr-black-1);
+  font-size: var(--fs-700);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
 
-div.outline {
-  letter-spacing: -25px;
-  -webkit-text-stroke: 2px var(--clr-yellow-1);
-  -webkit-text-fill-color: var(--clr-yellow-1);
-  fill: var(--clr-yellow-1);
+h3 {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--clr-black-1);
+  font-size: var(--fs-600);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
 
-span.heading-hover {
-  letter-spacing: 2px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-span.heading-hover:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+h5 {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--clr-black-2);
+  font-size: var(--fs-500);
+  font-weight: 500;
+  letter-spacing: 10%;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
 
 h6 {
-  font-size: 2rem;
+  font-size: var(--fs-300);
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   color: var(--clr-black-2);
@@ -149,30 +173,368 @@ h6 {
   letter-spacing: 2px;
 }
 
+p {
+  font-size: var(--fs-200);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  color: var(--clr-black-2);
+}
+
 a {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: var(--clr-yellow-1);
+  color: var(--clr-black-1);
   font-size: var(--fs-anchors);
 }
 
+sup {
+  font-weight: 500;
+}
+
+.number {
+  margin-right: 20px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: var(--clr-black-1);
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: var(--fs-300);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  color: var(--clr-yellow-1);
+}
+
+.fa,
+.fas,
+.fab {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 400;
+}
+
+.instagram-link {
+  width: 20px;
+  height: 20px;
+}
+
+.instagram-link:hover .fa-instagram {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(1.2) rotateZ(30deg) translateY(-10px);
+          transform: scale(1.2) rotateZ(30deg) translateY(-10px);
+  color: #9c155f;
+}
+
+.facebook-link {
+  width: 20px;
+  height: 20px;
+}
+
+.facebook-link:hover .fa-facebook-f {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(1.2) rotateZ(30deg) translateY(-10px);
+          transform: scale(1.2) rotateZ(30deg) translateY(-10px);
+  color: #4267b2;
+}
+
 button.button {
-  color: #ffb000;
+  color: var(--clr-black-1);
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: capitalize;
-  padding: 20px 20px;
-  font-weight: wgt(--wgt-500);
+  font-weight: 500;
   font-size: var(--fs-buttons);
   background: none;
   border: none;
   cursor: pointer;
   text-align: center;
+  width: 20rem;
+  height: 5.6rem;
+  padding-top: 0.2rem;
+}
+
+.accordion {
+  width: 100%;
+  padding: 5px;
+}
+
+.accordion-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.accordion-body .illustration {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  height: 100%;
+  text-align: center;
+}
+
+.accordion-body .illustration img {
+  width: 50%;
+  height: auto;
+  pointer-events: none;
+}
+
+.accordion-body .description {
+  padding: 2rem 1.25rem;
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.accordion-body .description > * + * {
+  margin-top: 20px;
+  max-width: 100ch;
+}
+
+.accordion-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 22vh;
+  border: 0px !important;
+}
+
+.accordion-button h3,
+.accordion-button h5 {
+  text-align: left;
+  width: 100%;
+}
+
+.accordion-button:focus {
+  border-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.accordion-button:hover {
+  border-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 176, 0, 0.25) !important;
+          box-shadow: 0 0 0 0.25rem rgba(255, 176, 0, 0.25) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+}
+
+.accordion-button::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 20px;
+  height: 3px;
+  background-color: var(--clr-black-1);
+}
+
+.accordion-button::after {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 20px;
+  height: 3px;
+  background-color: var(--clr-black-1);
+}
+
+.accordion-button:not(.collapsed)::before {
+  -webkit-transform: rotate(360deg) !important;
+          transform: rotate(360deg) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  -webkit-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
+  background-image: none !important;
+}
+
+.accordion-item:last-of-type .accordion-collapse {
+  border-bottom-width: 0px !important;
+}
+
+.accordian-header h3 {
+  text-transform: uppercase !important;
+}
+
+.testimonials-container {
+  width: 60%;
+  margin: 20px auto;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.testimonials-container [class*="line-"] {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  border-left: 1px solid var(--clr-neutral-black-300);
+  height: 100%;
+}
+
+.testimonials-container .line-left {
+  left: 15%;
+  -webkit-filter: drop-shadow(5px 0px 5px var(--clr-neutral-black-400));
+          filter: drop-shadow(5px 0px 5px var(--clr-neutral-black-400));
+}
+
+.testimonials-container .line-right {
+  right: 15%;
+  -webkit-filter: drop-shadow(-5px 0px 5px var(--clr-neutral-black-400));
+          filter: drop-shadow(-5px 0px 5px var(--clr-neutral-black-400));
+}
+
+.carousel {
+  width: 70%;
+  height: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 500%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.slider .slide {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .slide .slide-content {
+  max-width: 450px;
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 5fr;
+      grid-template-rows: 2fr 5fr;
+  place-items: center;
+  min-height: 400px;
+  background-color: var(--clr-neutral-black-400);
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  background-color: var(--clr-neutral-white-200);
+  min-width: 50px;
+  min-height: 50px;
+  border: none;
+  border-radius: 50%;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.arrow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.arrow:hover {
+  background-color: var(--clr-primary-yellow-200);
+}
+
+.arrow:focus {
+  background-color: var(--clr-primary-yellow-200);
+}
+
+.arrow-prev {
+  left: 0%;
+}
+
+.arrow-prev img {
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+}
+
+.arrow-next {
+  right: 0%;
+}
+
+.arrow-next img {
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+}
+
+.placeReview {
+  display: block;
+  margin: auto;
+}
+
+.scroll-opacity-class {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-opacity {
+  opacity: 1;
 }
 
 nav {
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding: 2vh 4vw;
-  position: relative;
+  position: fixed;
+  top: 0;
   z-index: 5;
   width: 100%;
   display: -webkit-box;
@@ -183,20 +545,24 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: transparent;
 }
 
 nav div.logo {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: white;
+  color: black;
   font-size: 2rem;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: left;
   cursor: pointer;
+  font-weight: 700;
 }
 
 nav ul.nav-links {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
   overflow-y: scroll;
   padding: 12vh 50px;
   background: var(--clr-white-1);
@@ -225,6 +591,10 @@ nav ul.nav-links {
           transform: translateX(101%);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+nav ul.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 nav li.submenu-links:not(:last-child) {
@@ -307,27 +677,58 @@ nav .submenu a:hover::after {
   top: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background-color: var(--clr-black-2);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   z-index: 3;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
 }
 
-#landingPage {
-  background-color: var(--clr-black-1);
+.blurSlate .info {
+  width: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  opacity: 1;
+}
+
+.blurSlate .info > * {
+  margin-top: 10px;
+}
+
+.blurSlate .info .blurSlateLogo {
+  width: auto;
+  color: var(--clr-white-1);
+}
+
+.blurSlate .info .blurSlateSub {
+  width: auto;
+  color: var(--clr-white-1);
+  font-weight: 400;
+}
+
+.blurSlate .info .social-links > * {
+  margin-right: 10px;
+}
+
+.section {
   width: 100%;
   min-height: 100vh;
   height: auto;
+}
+
+.section-1 {
+  padding-top: 60px;
   display: -ms-grid;
   display: grid;
   place-items: center;
   position: relative;
-  -ms-grid-rows: 1fr 7fr 3fr;
-      grid-template-rows: 1fr 7fr 3fr;
+  -ms-grid-rows: 7fr 4fr;
+      grid-template-rows: 7fr 4fr;
 }
 
-#landingPage canvas {
+.section-1 canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -336,8 +737,12 @@ nav .submenu a:hover::after {
   mix-blend-mode: screen;
 }
 
-.CTA {
+.section-1 .CTA {
+  margin-top: 50px;
   place-self: flex-start center;
+  height: 100%;
+  max-width: 600px;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,32 +751,52 @@ nav .submenu a:hover::after {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: auto;
   position: relative;
   z-index: 2;
 }
 
-.CTA .box {
+.section-1 .CTA .box {
   z-index: -1;
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-52%);
-          transform: translateX(-52%);
-  width: 33.34%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 200px;
   height: 60px;
-  border: 2px solid #ffb000;
+  border: 2px solid var(--clr-yellow-1);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
+.heading {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-2 .what-we-do-accordion {
+  width: 100%;
+}
+
+.section-4 {
+  background-color: var(--clr-black-1);
+}
+
 footer.footer-landing {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  bottom: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,7 +825,7 @@ footer.footer-landing ul li {
 }
 
 footer.footer-landing ul a {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 footer.footer-landing p {
@@ -411,8 +836,8 @@ footer.footer-landing p {
           flex: 1;
   text-align: right;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: var(--clr-yellow-1);
+  color: var(--clr-black-1);
   font-size: var(--fs-anchors);
-  font-weight: 300;
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */

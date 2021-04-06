@@ -1,0 +1,118 @@
+.testimonials-container {
+	//background-color: black;
+	width: 60%;
+	margin: 20px auto;
+	position: relative;
+	display: grid;
+	place-items: center;
+	[class*="line-"] {
+		position: absolute;
+		top: 0;
+		z-index: 3;
+		border-left: 1px solid var(--clr-neutral-black-300);
+		height: 100%;
+	}
+	.line-left {
+		left: 15%;
+		filter: drop-shadow(5px 0px 5px var(--clr-neutral-black-400));
+	}
+	.line-right {
+		right: 15%;
+		filter: drop-shadow(-5px 0px 5px var(--clr-neutral-black-400));
+	}
+}
+
+.carousel {
+	width: 70%;
+	height: 95%;
+	margin: auto;
+
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+	position: relative;
+}
+.slider {
+	flex-shrink: 0;
+	display: flex;
+	height: 100%;
+	width: 500%;
+	transition: all 0.3s ease-in-out;
+	background-color: transparent;
+	.slide {
+		flex: 1;
+		flex-basis: 20%;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.slide-content {
+			max-width: 450px;
+			width: auto;
+			display: grid;
+			grid-template-rows: 2fr 5fr;
+			place-items: center;
+			min-height: 400px;
+			background-color: var(--clr-neutral-black-400);
+			margin: auto;
+			padding: 30px;
+			text-align: center;
+		}
+	}
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 2;
+	background-color: var(--clr-neutral-white-200);
+	min-width: 50px;
+	min-height: 50px;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.1s ease-in-out;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+	}
+
+	&:hover {
+		background-color: var(--clr-primary-yellow-200);
+	}
+
+	&:focus {
+		background-color: var(--clr-primary-yellow-200);
+	}
+}
+.arrow-prev {
+	left: 0%;
+	img {
+		transform: translate(-60%, -50%);
+	}
+}
+.arrow-next {
+	right: 0%;
+	img {
+		transform: translate(-60%, -50%);
+	}
+}
+
+.placeReview {
+	display: block;
+	margin: auto;
+}
+
+.scroll-opacity-class {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.scroll-opacity {
+	opacity: 1;
+}

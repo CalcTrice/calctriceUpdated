@@ -1,12 +1,16 @@
 button.button {
-	color: #ffb000;
+	color: var(--clr-black-1);
 	font-family: $poppins;
 	text-transform: capitalize;
-	padding: 20px 20px;
-	font-weight: wgt(--wgt-500);
+
+	font-weight: 500;
 	font-size: var(--fs-buttons);
 	background: none;
 	border: none;
 	cursor: pointer;
 	text-align: center;
+
+	width: 20rem;
+	height: 5.6rem;
+	padding-top: 0.2rem;
 }

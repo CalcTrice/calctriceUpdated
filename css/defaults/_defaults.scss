@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
 	//Font Sizes
 	--fs-800: 8rem;
+	--fs-700: 6rem;
+	--fs-600: 4rem;
+	--fs-500: 2.2rem;
 	--fs-400: 3rem;
 	--fs-300: 2rem;
 	--fs-200: 1.6rem;
@@ -29,13 +32,15 @@
 @media screen and(max-width: 992px) {
 	:root {
 		--fs-800: 6rem;
+		--fs-700: 4.5rem;
 		--fs-buttons: 1.4rem;
 		--fs-anchors: 1.2rem;
 	}
 }
 @media screen and(max-width: 700px) {
 	:root {
-		--fs-800: 4rem;
+		--fs-800: 4.5rem;
+		--fs-700: 4rem;
 		--fs-buttons: 1.4rem;
 		--fs-anchors: 1.2rem;
 	}
