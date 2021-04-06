@@ -704,6 +704,7 @@ nav .submenu a:hover::after {
 .blurSlate .info .blurSlateLogo {
   width: auto;
   color: var(--clr-white-1);
+  text-transform: capitalize;
 }
 
 .blurSlate .info .blurSlateSub {
