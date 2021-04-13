@@ -1,338 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CalcTrice</title>
-		<link
-			rel="stylesheet"
-			href="library-vendors/Bootstrap/css/bootstrap.min.css"
-		/>
-		<link rel="stylesheet" href="css/main.css" />
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-			crossorigin="anonymous"
-		/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CalcTrice</title>
+        <link
+            rel="stylesheet"
+            href="library-vendors/Bootstrap/css/bootstrap.min.css"
+            />
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
+            />  
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-		<script defer src="main.js"></script>
-	</head>
-	<body>
-		<nav>
-			<div class="blurSlate">
-				<div class="info">
-					<h3 class="blurSlateLogo">CalcTrice<sup>©</sup></h3>
-					<p class="blurSlateSub">Follow us at:</p>
-					<div class="social-links">
-						<a
-							class="instagram-link"
-							href="https://www.instagram.com/calctrice_/"
-							><i class="fab fa-instagram"></i
-						></a>
-						<a class="facebook-link" href="#"
-							><i class="fab fa-facebook-f"></i
-						></a>
-					</div>
-				</div>
-			</div>
-			<div class="logo">CalcTrice<sup>©</sup></div>
-			<ul class="nav-links">
-				<li class="submenu-links">
-					<h6>Calculator Tutorials</h6>
-					<ul class="submenu">
-						<li><a href="#">Instructions</a></li>
-						<li><a href="#">Videos</a></li>
-					</ul>
-				</li>
-				<li class="submenu-links">
-					<h6>Article Submissions</h6>
-					<ul class="submenu">
-						<li><a href="#">Procedure</a></li>
-						<li><a href="#">Submission Fields</a></li>
-					</ul>
-				</li>
-				<li class="submenu-links">
-					<h6>Work with us</h6>
-					<ul class="submenu">
-						<li><a href="#">Content Writer</a></li>
-						<li><a href="#">Consultant</a></li>
-						<li><a href="#">Developer</a></li>
-						<li><a href="#">Public Relations</a></li>
-					</ul>
-				</li>
-				<li class="submenu-links">
-					<h6>Our Programmes</h6>
-					<ul class="submenu">
-						<li><a href="#">Internship</a></li>
-						<li><a href="#">Apprenticeship</a></li>
-						<li><a href="#">Partnership</a></li>
-					</ul>
-				</li>
-				<li class="submenu-links">
-					<h6>You can help us by</h6>
-					<ul class="submenu">
-						<li><a href="#">Donating</a></li>
-						<li><a href="#">Develop new formulae</a></li>
-						<li><a href="#">Others</a></li>
-					</ul>
-				</li>
-				<li class="close-nav">
-					<img src="assets/close-icon.svg" alt="" />
-				</li>
-			</ul>
-			<div class="burger" href="#">
-				<img src="assets/nav-icon.svg" alt="" />
-			</div>
-		</nav>
-		<div class="Container">
-			<section class="section section-1" id="landingSection">
-				<h1>
-					<div class="regular">Making complex</div>
-					<div class="regular">Calculations</div>
-					<div class="regular">Easy,</div>
-					<div class="regular">For You</div>
-				</h1>
-				<div class="CTA">
-					<div class="box"></div>
-					<button
-						class="button button-1"
-						onclick="window.location.href='articles.html'"
-					>
-						Read some articles
-					</button>
-					<button class="button button-2">Jump to calculator</button>
-					<button class="button button-3">Contact us bruh</button>
-				</div>
-			</section>
-			<section class="section section-2">
-				<div class="heading">
-					<h2>What we Do</h2>
-				</div>
-				<div
-					class="what-we-do-accordion accordion accordion-flush"
-					id="accordionFlushExample"
-				>
-					<div class="accordion-item" id="service-1">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#flush-collapseOne"
-							aria-expanded="false"
-							aria-controls="flush-collapseOne"
-						>
-							<div class="number accordian-number">01</div>
-							<div class="accordian-header">
-								<h3>All-Purpose Calculation Tool</h3>
-								<h5>
-									Lorem, ipsum dolor sit amet consectetur
-									adipisicing elit.
-								</h5>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+        <script defer src="main.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <nav>
+            <div class="blurSlate">
+                <div class="info">
+                    <h3 class="blurSlateLogo">CalcTrice<sup>©</sup></h3>
+                    <p class="blurSlateSub">Follow us at:</p>
+                    <div class="social-links">
+                        <a
+                            class="instagram-link"
+                            href="https://www.instagram.com/calctrice_/"
+                            ><i class="fab fa-instagram"></i
+                            ></a>
+                        <a class="facebook-link" href="#"
+                            ><i class="fab fa-facebook-f"></i
+                            ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">CalcTrice<sup>©</sup></div>
+            <ul class="nav-links">
+                <li class="submenu-links">
+                    <h6>Calculator Tutorials</h6>
+                    <ul class="submenu">
+                        <li><a href="#">Instructions</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-links">
+                    <h6>Article Submissions</h6>
+                    <ul class="submenu">
+                        <li><a href="#">Procedure</a></li>
+                        <li><a href="#">Submission Fields</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-links">
+                    <h6>Work with us</h6>
+                    <ul class="submenu">
+                        <li><a href="#">Content Writer</a></li>
+                        <li><a href="#">Consultant</a></li>
+                        <li><a href="#">Developer</a></li>
+                        <li><a href="#">Public Relations</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-links">
+                    <h6>Our Programmes</h6>
+                    <ul class="submenu">
+                        <li><a href="#">Internship</a></li>
+                        <li><a href="#">Apprenticeship</a></li>
+                        <li><a href="#">Partnership</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-links">
+                    <h6>You can help us by</h6>
+                    <ul class="submenu">
+                        <li><a href="#">Donating</a></li>
+                        <li><a href="#">Develop new formulae</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </li>
+                <li class="close-nav">
+                    <img src="assets/close-icon.svg" alt="" />
+                </li>
+            </ul>
+            <div class="burger" href="#">
+                <img src="assets/nav-icon.svg" alt="" />
+            </div>
+        </nav>
+        <div class="Container">
+            <section class="section section-1" id="landingSection">
+                <h1>
+                    <div class="regular">Making complex</div>
+                    <div class="regular">Calculations</div>
+                    <div class="regular">Easy,</div>
+                    <div class="regular">For You</div>
+                </h1>
+                <div class="CTA">
+                    <div class="box"></div>
+                    <button
+                        class="button button-1"
+                        onclick="window.location.href='articles.html'"
+                        >
+                    Read some articles
+                    </button>
+                    <button class="button button-2">Jump to calculator</button>
+                    <button class="button button-3">Contact us bruh</button>
+                </div>
+            </section>
+            <section class="section section-2">
+                <div class="heading">
+                    <h2>What we Do</h2>
+                </div>
+                <div
+                    class="what-we-do-accordion accordion accordion-flush"
+                    id="accordionFlushExample"
+                    >
+                    <div class="accordion-item" id="service-1">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseOne"
+                            >
+                            <div class="number accordian-number">01</div>
+                            <div class="accordian-header">
+                                <h3>All-Purpose Calculation Tool</h3>
+                                <h5>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </h5>
+                            </div>
+                        </button>
+                        <div
+                            id="flush-collapseOne"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne"
+                            data-bs-parent="#accordionFlushExample"
+                            >
+                            <div class="accordion-body">
+                                <div class="illustration">
+                                    <img src="assets/graphSVG.svg" alt="" />
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Optio illo possimus
+                                        mollitia. Nam dolorum, eius ab quibusdam
+                                        incidunt numquam quod rem iusto magnam!
+                                        Ad nostrum voluptate, accusamus adipisci
+                                        aliquid culpa! Reprehenderit
+                                        necessitatibus atque dignissimos odio
+                                        minus excepturi est cumque adipisci
+                                        quasi eaque veniam reiciendis sit nemo
+                                        recusandae voluptatum, hic vitae natus
+                                        minima, possimus dolorum harum
+                                        consequatur voluptatem repellat
+                                        veritatis! Dolorem! Doloremque
+                                        reprehenderit dolorum enim cupiditate id
+                                        iure voluptatibus. Dignissimos ipsum
+                                        eligendi exercitationem at minima
+                                        laborum. Quae iusto repudiandae labore
+                                        in adipisci debitis maiores,
+                                        necessitatibus cum? Quasi eius iste quas
+                                        id!
+                                    </p>
+                                    <button
+                                        class="button button--minor-action-button"
+                                        >
+                                    See All Tools!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="accordion-item" id="service-2">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseTwo"
+                            >
+                            <div class="number accordian-number">02</div>
+                            <div class="accordian-header">
+                                <h3>Financial Consultancy</h3>
+                                <h5>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </h5>
+                            </div>
+                        </button>
+                        <div
+                            id="flush-collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo"
+                            data-bs-parent="#accordionFlushExample"
+                            >
+                            <div class="accordion-body">
+                                <div class="illustration">
+                                    <img src="assets/graphSVG.svg" alt="" />
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Optio illo possimus
+                                        mollitia. Nam dolorum, eius ab quibusdam
+                                        incidunt numquam quod rem iusto magnam!
+                                        Ad nostrum voluptate, accusamus adipisci
+                                        aliquid culpa! Reprehenderit
+                                        necessitatibus atque dignissimos odio
+                                        minus excepturi est cumque adipisci
+                                        quasi eaque veniam reiciendis sit nemo
+                                        recusandae voluptatum, hic vitae natus
+                                        minima, possimus dolorum harum
+                                        consequatur voluptatem repellat
+                                        veritatis! Dolorem! Doloremque
+                                        reprehenderit dolorum enim cupiditate id
+                                        iure voluptatibus. Dignissimos ipsum
+                                        eligendi exercitationem at minima
+                                        laborum. Quae iusto repudiandae labore
+                                        in adipisci debitis maiores,
+                                        necessitatibus cum? Quasi eius iste quas
+                                        id!
+                                    </p>
+                                    <button
+                                        class="button button--minor-action-button"
+                                        >
+                                    Get Professional Consultancy!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="accordion-item" id="service-3">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseThree"
+                            >
+                            <div class="number accordian-number">03</div>
+                            <div class="accordian-header">
+                                <h3>Weekly articles on finance</h3>
+                                <h5>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </h5>
+                            </div>
+                        </button>
+                        <div
+                            id="flush-collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree"
+                            data-bs-parent="#accordionFlushExample"
+                            >
+                            <div class="accordion-body">
+                                <div class="illustration">
+                                    <img src="assets/graphSVG.svg" alt="" />
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Optio illo possimus
+                                        mollitia. Nam dolorum, eius ab quibusdam
+                                        incidunt numquam quod rem iusto magnam!
+                                        Ad nostrum voluptate, accusamus adipisci
+                                        aliquid culpa! Reprehenderit
+                                        necessitatibus atque dignissimos odio
+                                        minus excepturi est cumque adipisci
+                                        quasi eaque veniam reiciendis sit nemo
+                                        recusandae voluptatum, hic vitae natus
+                                        minima, possimus dolorum harum
+                                        consequatur voluptatem repellat
+                                        veritatis! Dolorem! Doloremque
+                                        reprehenderit dolorum enim cupiditate id
+                                        iure voluptatibus. Dignissimos ipsum
+                                        eligendi exercitationem at minima
+                                        laborum. Quae iusto repudiandae labore
+                                        in adipisci debitis maiores,
+                                        necessitatibus cum? Quasi eius iste quas
+                                        id!
+                                    </p>
+                                    <button
+                                        class="button button--minor-action-button"
+                                        >
+                                    Read Articles Now!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </section>
+            <section class="section section-3">
+                <div class="heading">
+                    <h2>Testimonials</h2>
+                    <h5>Let's see what our users say!</h5>
+                </div>
+                <div class="testimonials-container">
+						<div class=" testimonials-carousel ">
+							<div class="item">
+								
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi eaque saepe fugit.</p>
+								
 							</div>
-						</button>
-						<div
-							id="flush-collapseOne"
-							class="accordion-collapse collapse"
-							aria-labelledby="flush-headingOne"
-							data-bs-parent="#accordionFlushExample"
-						>
-							<div class="accordion-body">
-								<div class="illustration">
-									<img src="assets/graphSVG.svg" alt="" />
-								</div>
-								<div class="description">
-									<p>
-										Lorem ipsum dolor sit, amet consectetur
-										adipisicing elit. Optio illo possimus
-										mollitia. Nam dolorum, eius ab quibusdam
-										incidunt numquam quod rem iusto magnam!
-										Ad nostrum voluptate, accusamus adipisci
-										aliquid culpa! Reprehenderit
-										necessitatibus atque dignissimos odio
-										minus excepturi est cumque adipisci
-										quasi eaque veniam reiciendis sit nemo
-										recusandae voluptatum, hic vitae natus
-										minima, possimus dolorum harum
-										consequatur voluptatem repellat
-										veritatis! Dolorem! Doloremque
-										reprehenderit dolorum enim cupiditate id
-										iure voluptatibus. Dignissimos ipsum
-										eligendi exercitationem at minima
-										laborum. Quae iusto repudiandae labore
-										in adipisci debitis maiores,
-										necessitatibus cum? Quasi eius iste quas
-										id!
-									</p>
-									<button
-										class="button button--minor-action-button"
-									>
-										See All Tools!
-									</button>
-								</div>
+							<div class="item">
+								
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi eaque saepe fugit.</p>
+								
 							</div>
+							<div class="item">
+								
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi eaque saepe fugit.</p>
+								
+							</div>
+							<div class="item">
+								
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi eaque saepe fugit.</p>
+								
+							</div>
+							<div class="item">
+								
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi eaque saepe fugit.</p>
+								
+							</div>
+							
+							
 						</div>
-					</div>
-					<hr />
-					<div class="accordion-item" id="service-2">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#flush-collapseTwo"
-							aria-expanded="false"
-							aria-controls="flush-collapseTwo"
-						>
-							<div class="number accordian-number">02</div>
-							<div class="accordian-header">
-								<h3>Financial Consultancy</h3>
-								<h5>
-									Lorem, ipsum dolor sit amet consectetur
-									adipisicing elit.
-								</h5>
-							</div>
-						</button>
-						<div
-							id="flush-collapseTwo"
-							class="accordion-collapse collapse"
-							aria-labelledby="flush-headingTwo"
-							data-bs-parent="#accordionFlushExample"
-						>
-							<div class="accordion-body">
-								<div class="illustration">
-									<img src="assets/graphSVG.svg" alt="" />
-								</div>
-								<div class="description">
-									<p>
-										Lorem ipsum dolor sit, amet consectetur
-										adipisicing elit. Optio illo possimus
-										mollitia. Nam dolorum, eius ab quibusdam
-										incidunt numquam quod rem iusto magnam!
-										Ad nostrum voluptate, accusamus adipisci
-										aliquid culpa! Reprehenderit
-										necessitatibus atque dignissimos odio
-										minus excepturi est cumque adipisci
-										quasi eaque veniam reiciendis sit nemo
-										recusandae voluptatum, hic vitae natus
-										minima, possimus dolorum harum
-										consequatur voluptatem repellat
-										veritatis! Dolorem! Doloremque
-										reprehenderit dolorum enim cupiditate id
-										iure voluptatibus. Dignissimos ipsum
-										eligendi exercitationem at minima
-										laborum. Quae iusto repudiandae labore
-										in adipisci debitis maiores,
-										necessitatibus cum? Quasi eius iste quas
-										id!
-									</p>
-									<button
-										class="button button--minor-action-button"
-									>
-										Get Professional Consultancy!
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<hr />
-					<div class="accordion-item" id="service-3">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#flush-collapseThree"
-							aria-expanded="false"
-							aria-controls="flush-collapseThree"
-						>
-							<div class="number accordian-number">03</div>
-							<div class="accordian-header">
-								<h3>Weekly articles on finance</h3>
-								<h5>
-									Lorem, ipsum dolor sit amet consectetur
-									adipisicing elit.
-								</h5>
-							</div>
-						</button>
-						<div
-							id="flush-collapseThree"
-							class="accordion-collapse collapse"
-							aria-labelledby="flush-headingThree"
-							data-bs-parent="#accordionFlushExample"
-						>
-							<div class="accordion-body">
-								<div class="illustration">
-									<img src="assets/graphSVG.svg" alt="" />
-								</div>
-								<div class="description">
-									<p>
-										Lorem ipsum dolor sit, amet consectetur
-										adipisicing elit. Optio illo possimus
-										mollitia. Nam dolorum, eius ab quibusdam
-										incidunt numquam quod rem iusto magnam!
-										Ad nostrum voluptate, accusamus adipisci
-										aliquid culpa! Reprehenderit
-										necessitatibus atque dignissimos odio
-										minus excepturi est cumque adipisci
-										quasi eaque veniam reiciendis sit nemo
-										recusandae voluptatum, hic vitae natus
-										minima, possimus dolorum harum
-										consequatur voluptatem repellat
-										veritatis! Dolorem! Doloremque
-										reprehenderit dolorum enim cupiditate id
-										iure voluptatibus. Dignissimos ipsum
-										eligendi exercitationem at minima
-										laborum. Quae iusto repudiandae labore
-										in adipisci debitis maiores,
-										necessitatibus cum? Quasi eius iste quas
-										id!
-									</p>
-									<button
-										class="button button--minor-action-button"
-									>
-										Read Articles Now!
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<hr />
-				</div>
-			</section>
-
-			<section class="section section-3">
-				<div class="heading">
-					<h2>Testimonials</h2>
-					<h5>Let's see what our users say!</h5>
-				</div>
-
-				<div class="testimonials-container">
-					<button data-scroll class="arrow arrow-prev">
-						<img src="assets/leftChevron.svg" alt="" />
-					</button>
-					<div class="line-left"></div>
-					<div class="carousel testimonials-carousel">
-						<div class="slider"></div>
-					</div>
-					<div class="line-right"></div>
-					<button data-scroll class="arrow arrow-next">
-						<img src="assets/rightChevron.svg" alt="" />
-					</button>
-				</div>
-			</section>
-			<section class="section section-4"></section>
-		</div>
-		<footer class="footer footer-landing">
-			<ul>
-				<li><a href="#">Terms &amp; Conditions</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-			</ul>
-			<p>Owned by CalcTrice<sup>©</sup> 2021</p>
-		</footer>
-
+					
+                </div>
+            </section>
+            <section class="section section-4"></section>
+        </div>
+        <footer class="footer footer-landing">
+            <ul>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p>Owned by CalcTrice<sup>©</sup> 2021</p>
+        </footer>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
 		<script src="library-vendors/Bootstrap/js/bootstrap.min.js"></script>
-	</body>
+
+	
+    </body>
 </html>

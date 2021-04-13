@@ -7,7 +7,9 @@ html {
 	overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-	width: 1rem;
+	max-width: 1rem;
+	width: 0.8vw;
+	width: auto;
 	cursor: grab;
 }
 
