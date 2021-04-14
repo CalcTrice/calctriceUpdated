@@ -62,3 +62,38 @@
 .section-4 {
 	background-color: var(--clr-black-1);
 }
+
+.article-section{
+	background-color: var(--clr-black-1);
+	height: 50vh;
+	margin-top: 10rem;
+
+	a.page-change{
+		color: white;
+		font-size: 20px;
+	}
+}
+ul.page-transition{
+	display: flex;
+	position: absolute;
+	z-index: 9999;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	pointer-events: none;
+	list-style-type: none;
+}
+ul.page-transition li{
+	transform: scaleY(0);
+	background-color: var(--clr-yellow-1);
+	width: 10%;
+}
+ul.page-transition li div{
+	width: 100%;
+	height: 100%;
+	transform: scaleX(0) scaleY(1);
+	background-color: var(--clr-black-1);
+
+}

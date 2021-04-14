@@ -6,6 +6,9 @@ html {
 	position: relative;
 	overflow-x: hidden;
 }
+body{
+	opacity: 0;
+}
 body::-webkit-scrollbar {
 	max-width: 1rem;
 	width: 0.8vw;
@@ -92,6 +95,9 @@ h3 {
 	height: fit-content;
 	width: 100%;
 }
+h4{
+	font-family: $poppins;
+}
 h5 {
 	font-family: $poppins;
 	color: var(--clr-black-2);
@@ -128,6 +134,8 @@ sup {
 	margin-right: 20px;
 	min-width: 40px;
 	min-height: 40px;
+	max-width: 40px;
+	max-height: 40px;
 	background-color: var(--clr-black-1);
 	border-radius: 50%;
 	display: grid;
@@ -170,6 +178,18 @@ sup {
 			color: #4267b2;
 		}
 	}
+}
+.date-time{
+	font-size: var(--fs-100);
+	font-family: $poppins;
+	font-weight: 400;
+	color: var(--clr-black-2);
+} 
+.date{
+	font-size: var(--fs-100);
+	font-family: $poppins;
+	font-weight: 500;
+	color: var(--clr-black-2);
 }
 @import "components/components";
 @import "layouts/layouts";

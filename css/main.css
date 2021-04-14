@@ -8,6 +8,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  opacity: 0;
+}
+
 body::-webkit-scrollbar {
   max-width: 1rem;
   width: 0.8vw;
@@ -58,6 +62,7 @@ body::-webkit-scrollbar-thumb {
   --fs-400: 3rem;
   --fs-300: 2rem;
   --fs-200: 1.6rem;
+  --fs-100: 1.4rem;
   --fs-buttons: 1.4rem;
   --fs-anchors: 1.2rem;
   --clr-yellow-1: #ffb000;
@@ -153,6 +158,10 @@ h3 {
   width: 100%;
 }
 
+h4 {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 h5 {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--clr-black-2);
@@ -196,6 +205,8 @@ sup {
   margin-right: 20px;
   min-width: 40px;
   min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   background-color: var(--clr-black-1);
   border-radius: 50%;
   display: -ms-grid;
@@ -243,6 +254,20 @@ sup {
   -webkit-transform: scale(1.2) rotateZ(30deg) translateY(-10px);
           transform: scale(1.2) rotateZ(30deg) translateY(-10px);
   color: #4267b2;
+}
+
+.date-time {
+  font-size: var(--fs-100);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: var(--clr-black-2);
+}
+
+.date {
+  font-size: var(--fs-100);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  color: var(--clr-black-2);
 }
 
 button.button {
@@ -377,6 +402,144 @@ button.button {
 
 .accordian-header h3 {
   text-transform: uppercase !important;
+}
+
+.articles-catalogue__title-wrapper {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.articles-catalogue__title-wrapper h6 {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: var(--fs-300);
+}
+
+.articles-catalogue__title-wrapper a {
+  color: var(--clr-black-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: var(--fs-buttons);
+  position: relative;
+  width: auto;
+}
+
+.articles-catalogue__title-wrapper a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-yellow-1);
+  height: 2px;
+  width: 30px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.articles-catalogue__title-wrapper a:hover {
+  color: var(--clr-black-1);
+}
+
+.articles-catalogue__title-wrapper a:hover::after {
+  width: 100%;
+}
+
+.articles-catalogue__display-card {
+  position: relative;
+  margin: 0.4rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px;
+  border: 1px solid var(--clr-black-1);
+  background-color: var(--clr-white-1);
+  -webkit-box-shadow: 0px 0px 5px var(--clr-black-4);
+          box-shadow: 0px 0px 5px var(--clr-black-4);
+  overflow: hidden;
+}
+
+.article-link__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  pad: 0px;
+}
+
+.article-number, .article-date {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article-title {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  padding-left: 2.5rem;
+}
+
+.article-authors {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.article-title h4 {
+  color: var(--clr-black-1);
+  font-size: var(--fs-200);
+  text-align: left;
+  font-weight: 500;
+  max-width: 65ch;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-authors p {
+  color: var(--clr-black-2);
+  font-size: var(--fs-100);
+  text-align: center;
+  font-weight: 500;
+}
+
+.articles-catalogue__display-card {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.articles-catalogue__display-card:hover {
+  background-color: var(--clr-black-1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.articles-catalogue__display-card:hover .article-number {
+  background-color: var(--clr-white-1);
+}
+
+.articles-catalogue__display-card:hover .article-title h4 {
+  color: var(--clr-white-1);
+}
+
+.articles-catalogue__display-card:hover .article-authors p {
+  color: var(--clr-white-2);
+}
+
+.articles-catalogue__display-card:hover .article-date .date-time {
+  color: var(--clr-white-2);
 }
 
 .testimonials-container {
@@ -720,6 +883,11 @@ nav .submenu a:hover::after {
   margin-right: 10px;
 }
 
+nav.dark-nav {
+  background: var(--clr-black-1);
+  color: var(--clr-white-1);
+}
+
 .section {
   width: 100%;
   min-height: 100vh;
@@ -799,6 +967,47 @@ nav .submenu a:hover::after {
 }
 
 .section-4 {
+  background-color: var(--clr-black-1);
+}
+
+.article-section {
+  background-color: var(--clr-black-1);
+  height: 50vh;
+  margin-top: 10rem;
+}
+
+.article-section a.page-change {
+  color: white;
+  font-size: 20px;
+}
+
+ul.page-transition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 9999;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  list-style-type: none;
+}
+
+ul.page-transition li {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  background-color: var(--clr-yellow-1);
+  width: 10%;
+}
+
+ul.page-transition li div {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   background-color: var(--clr-black-1);
 }
 

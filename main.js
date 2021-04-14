@@ -1,4 +1,5 @@
 window.onload = function () {
+    document.body.style.opacity = 1;
     init();
 }
 const navToggler = function () {
@@ -174,19 +175,20 @@ const navIntersection = function () {
 
     const obsCallback = function (entries, observer) {
         entries.forEach(function (entry) {
-            if (entry.isIntersecting == true)
-                console.log('Hello');
+            if (entry.isIntersecting == true) {
+                console.log("Hello");
+                nav.classList.add('dark-nav');
+            }
         })
-
     }
     const obsOptions = {
-        root: section2,
+        root: section4,
         threshold: 0.7
     }
     const observer = new IntersectionObserver(obsCallback, obsOptions);
     observer.observe(nav);
 }
-const owlInitFunc = function () {
+const carouselInit = function () {
 
     $('.testimonials-carousel').slick({
         centerMode: true,
@@ -226,12 +228,191 @@ const owlInitFunc = function () {
     });
 
 }
+const articlesCatalogueContentCreator = function () {
+    const cardTemplateString = `
+    <div class="col-lg-12 col-xxl-6">
+    <div class="articles-catalogue__display-card">
+        <a href="sample-article-page-1.html" class="article-link__card-overlay"></a>
+        <div class="number article-number"></div>
+        <div class="article-title">
+            <h4></h4>
+        </div>
+        <div class="article-authors">
+            <p></p>
+        </div>
+        <div class="article-date">
+            <span class="date-time date"></span>
+        </div>
+    </div>
+</div>
+    
+    `
+    const articleData = [
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Snigda Gupta'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia', 'Snigda Gupta'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia', 'Snigda Gupta', 'Adam West'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '15/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Snigda Gupta'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia', 'Snigda Gupta'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia', 'Snigda Gupta', 'Adam West'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '15/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Snigda Gupta'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia', 'Snigda Gupta'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '14/04/21',
+
+        },
+        {
+            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            authors: ['Yash Sonalia', 'Snigda Gupta', 'Adam West'],
+            topicsCovered: ['Finance', 'Business', 'Schooling'],
+            dateTime: '15/04/21',
+
+        },
+    ];
+    const dynamicCardAddition = document.querySelector('.dynamic-card-addition');
+
+    articleData.forEach(function () {
+        dynamicCardAddition.insertAdjacentHTML('beforeend', cardTemplateString);
+    })
+
+    const articleCard = document.querySelectorAll('.articles-catalogue__display-card');
+    articleCard.forEach(function (card, cardNumber) {
+        if (cardNumber < 9) card.querySelector('.article-number').innerHTML = `0${cardNumber + 1}`;
+        else card.querySelector('.article-number').innerHTML = `${cardNumber + 1}`;
+
+        card.querySelector('.article-title h4').innerHTML = `${articleData[cardNumber].heading}`;
+
+        if (articleData[cardNumber].authors.length > 1) card.querySelector('.article-authors p').innerHTML = `${articleData[cardNumber].authors.length} Authors`;
+        else card.querySelector('.article-authors p').innerHTML = `${articleData[cardNumber].authors}`;
+
+        card.querySelector('.article-date .date').innerHTML = `${articleData[cardNumber].dateTime}`;
+
+
+
+    })
+
+
+}
+const barbaInit = function () {
+    function pageTransition() {
+        const tl = gsap.timeline();
+        tl
+            .to('ul.page-transition li', { duration: 0.4, scaleY: 1, transformOrigin: "bottom left", stagger: 0.2 })
+            .to('ul.page-transition li div', { scaleX: 1, duration: 0.3, stagger: 0.1 })
+            .to('ul.page-transition li', { duration: 0.4, scaleY: 0, transformOrigin: "bottom left", stagger: 0.1, delay: 0.1 })
+            .to('ul.page-transition li div', { scaleX: 0, duration: 0.1, stagger: 0, })
+    }
+    function contentAnimation() {
+        const tl = gsap.timeline();
+        tl
+            .from('nav', { opacity: 0, duration: 0.2 })
+    }
+
+    function delay(n) {
+        n = n || 2000;
+        return new Promise(done => {
+            setTimeout(() => {
+                done();
+            }, n);
+        });
+    }
+
+    barba.init({
+        sync: true,
+        transitions: [{
+            async leave(data) {
+                const done = this.async();
+                pageTransition();
+                await delay(1500);
+                done();
+            },
+            async enter(data) {
+                contentAnimation();
+            },
+            async once(data) {
+                contentAnimation();
+            }
+        }]
+    })
+}
+
 function init() {
     navToggler()
-    particleJS();
-    homeGsap();
     sideNavGsap();
-    buttonAnimations();
-    owlInitFunc();
+    barbaInit();
+    if (document.body.id === "home") {
+        particleJS();
+        homeGsap();
+        pageTransition();
+        navIntersection();
+        buttonAnimations();
+        carouselInit();
+    }
+    if (document.body.id === "catalogue")
+        articlesCatalogueContentCreator();
 }
 
