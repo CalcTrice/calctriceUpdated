@@ -406,9 +406,8 @@ function init() {
     if (document.body.id === "home") {
         particleJS();
         homeGsap();
-        pageTransition();
-        navIntersection();
         buttonAnimations();
+        navIntersection();
         carouselInit();
     }
     if (document.body.id === "catalogue")
