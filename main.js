@@ -403,7 +403,6 @@ const barbaInit = function () {
 function init() {
     navToggler()
     sideNavGsap();
-    barbaInit();
     if (document.body.id === "home") {
         particleJS();
         homeGsap();
@@ -414,5 +413,8 @@ function init() {
     }
     if (document.body.id === "catalogue")
         articlesCatalogueContentCreator();
+
+    if (document.body.id === 'barba')
+        barbaInit();
 }
 
