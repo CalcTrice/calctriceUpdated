@@ -362,8 +362,8 @@ const barbaInit = function () {
         const tl = gsap.timeline();
         tl
             .to('ul.page-transition li', { duration: 0.4, scaleY: 1, transformOrigin: "bottom left", stagger: 0.2 })
-            .to('ul.page-transition li div', { scaleX: 1, duration: 0.3, stagger: 0.1 })
-            .to('ul.page-transition li', { duration: 0.4, scaleY: 0, transformOrigin: "bottom left", stagger: 0.1, delay: 0.1 })
+            .to('ul.page-transition li div', { scaleX: 1, duration: 0.3, transformOrigin: "bottom left", }, "+=0.1")
+            .to('ul.page-transition li', { duration: 0.4, scaleY: 0, transformOrigin: "top left", stagger: 0.1, delay: 0.1 })
             .to('ul.page-transition li div', { scaleX: 0, duration: 0.1, stagger: 0, })
     }
     function contentAnimation() {
