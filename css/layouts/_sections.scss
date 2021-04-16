@@ -1,7 +1,17 @@
+@keyframes rotate-1{
+	0%{
+		transform: translate(0%, 0%);
+	}
+	0%{
+		transform: translate(0%, 0%);
+	}
+}
+
 .section {
 	width: 100%;
 	min-height: 100vh;
 	height: auto;
+	
 }
 
 .section-1 {
@@ -51,11 +61,38 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	border-top: 1px solid var();
+	position: relative;
 }
 .section-2 {
 	.what-we-do-accordion {
 		width: 100%;
 	}
+	position: relative;
+	// .circle-1, .circle-2{
+	// 	display: block;
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	filter: blur(6px);
+		
+	// 	aspect-ratio: 1/1;
+	// 	border-radius: 50%;
+	// 	background-color: var(--clr-yellow-1);
+
+	// }
+	// .circle-1{
+	// 	min-width: 80px;
+	// 	width: 8vw;
+	// 	top: 10%;
+	// 	left: 25%;
+	// 	animation:rotate-1 15s linear infinite;
+	// }
+	// .circle-2{
+	// 	min-width: 60px;
+	// 	width: 6vw;
+	// 	bottom: 10%;
+	// 	right: 25%;
+	// }
 }
 .section-3 {
 }
@@ -65,16 +102,55 @@
 
 .article-section{
 	background-color: var(--clr-black-1);
-	height: 50vh;
-	margin-top: 10rem;
+	height: auto;
+	margin: 10rem 0rem;
 
 	a.page-change{
 		color: white;
 		font-size: 20px;
 	}
 }
+.pos-rel{
+	position: relative;
+}
+.article-details{
+	> *{
+		margin-bottom: 40px;
+	}
+		h5.detail-type{
+			text-transform: uppercase;
+			color: var(--clr-white-2);
+			font-size: var(--fs-100);
+			font-weight: 400;
+			letter-spacing: 1px;
+			text-align: left;
+			margin-bottom: 14px;
+		}
+		h3{
+			text-align: left;
+			color: var(--clr-white-1);
+			font-size: var(--fs-400);
+			text-transform: none;
+		}
+		h4{
+			color: var(--clr-white-1);
+			font-size: var(--fs-200);
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+	
+}
+.article-body{
+	margin-top: 3.2rem;
+	p{
+		color: var(--clr-white-1);
+		font-size: var(--fs-100);
+		font-weight: 300;
+		margin-bottom: 14px;
+	}
+}
 ul.page-transition{
-	display: flex;
+
 	position: absolute;
 	z-index: 9999;
 	height: 100vh;
@@ -86,14 +162,15 @@ ul.page-transition{
 	list-style-type: none;
 }
 ul.page-transition li{
-	transform: scaleY(0);
-	background-color: var(--clr-yellow-1);
-	width: 20%;
-}
-ul.page-transition li div{
 	width: 100%;
 	height: 100%;
-	transform: scaleX(0) scaleY(1);
-	background-color: var(--clr-black-1);
+	transform:scaleY(0);
+	background-color: var(--clr-yellow-1);
+
+	&.a{
+		background-color: var(--clr-yellow-1);
+	}
 
 }
+
+

@@ -8,7 +8,12 @@ html {
 }
 body{
 	opacity: 0;
+
+	&.article{
+		background-color: var(--clr-black-1);
+	}
 }
+
 body::-webkit-scrollbar {
 	max-width: 1rem;
 	width: 0.8vw;
@@ -21,7 +26,7 @@ body::-webkit-scrollbar-track {
 	cursor: grab;
 }
 ::selection {
-	background-color: var(--clr-yellow-2);
+	background-color: rgba(255, 176, 0, 0.6);
 }
 body::-webkit-scrollbar-thumb {
 	background-color: var(--clr-yellow-2);

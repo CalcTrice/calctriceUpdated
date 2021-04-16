@@ -11,30 +11,39 @@ const navToggler = function () {
 
     let tl = gsap.timeline();
 
-    blurSlate.addEventListener('click', function () {
-        navLinks.classList.remove('show');
-        tl.to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'right' })
-    });
+    if (!tl.isActive())
+        blurSlate.addEventListener('click', function () {
+            navLinks.classList.remove('show');
+            tl.to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'right' })
+        });
 
-    navIcon.addEventListener('click', function () {
-        navLinks.classList.add('show');
-        tl
-            .to('.blurSlate', { scaleX: 1, duration: 1, transformOrigin: 'left' }, "=-0.2")
-            .from('.blurSlate .info', { x: -200, opacity: 0, duration: 0.3 })
+    if (!tl.isActive())
+        navIcon.addEventListener('click', function () {
+            navLinks.classList.add('show');
+            tl
+                .from('.submenu-links ', { y: 50, opacity: 0, duration: 0.5, stagger: 0.15 })
+                .to('.blurSlate', { scaleX: 1, duration: 0.8, transformOrigin: 'left' }, "=-1")
+                .from('.blurSlate .info', { x: -200, opacity: 0, duration: 0.3 })
 
-        logo.style.transition = 'all 0.1s ease-out';
-        logo.style.opacity = 0;
-    });
 
-    closeNav.addEventListener('click', function () {
-        navLinks.classList.remove('show');
-        tl
-            .from('.blurSlate .info', { opacity: 1, duration: 0.2 })
-            .to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'right' },)
-        logo.style.transition = 'all 0.1s ease-out';
-        logo.style.opacity = 1;
-    });
+
+            logo.style.transition = 'all 0.1s ease-out';
+            logo.style.opacity = 0;
+        });
+    if (!tl.isActive())
+        closeNav.addEventListener('click', function () {
+            navLinks.classList.remove('show');
+            tl
+                .fromTo('.blurSlate .info', { opacity: 1, duration: 0.2 }, { opacity: 0 }, "=-0.3")
+                .to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'left' })
+                .to('.blurSlate .info', { opacity: 1, duration: 0 })
+
+            logo.style.transition = 'all 0.1s ease-out';
+            logo.style.opacity = 1;
+            // tl.reverse();
+        });
 }
+
 const homeGsap = function () {
 
     let tl = gsap.timeline({
@@ -50,7 +59,7 @@ const homeGsap = function () {
         .from('.box', { opacity: 0, duration: 0.5 }, "-=0.2")
         .from("canvas", { scale: 0, opacity: 0, duration: 0.5, ease: 'power.out' }, "-=0.5")
         .from('nav', { opacity: 0, duration: 0.2 })
-        .from('footer.footer-landing', { opacity: 0, duration: 0.2 }, "-=0.2")
+
 }
 const buttonAnimations = function () {
     const button1 = document.querySelector('.button-1');
@@ -358,18 +367,23 @@ const articlesCatalogueContentCreator = function () {
 
 }
 const barbaInit = function () {
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
     function pageTransition() {
         const tl = gsap.timeline();
+
         tl
-            .to('ul.page-transition li', { duration: 0.4, scaleY: 1, transformOrigin: "bottom left", stagger: 0.2 })
-            .to('ul.page-transition li div', { scaleX: 1, duration: 0.3, transformOrigin: "bottom left", }, "+=0.1")
-            .to('ul.page-transition li', { duration: 0.4, scaleY: 0, transformOrigin: "top left", stagger: 0.1, delay: 0.1 })
-            .to('ul.page-transition li div', { scaleX: 0, duration: 0.1, stagger: 0, })
+            .to('section.article-section', { opacity: 0, y: -100, duration: 0.5 })
+            .to('section.article-section', { opacity: 1, y: 0, duration: 0.5 }, '+=0.5')
+
+        window.scrollTo(0, 0)
+
     }
     function contentAnimation() {
-        const tl = gsap.timeline();
-        tl
-            .from('nav', { opacity: 0, duration: 0.2 })
+        current.container.remove();
+        window.scrollTo(0, 0);
     }
 
     function delay(n) {
@@ -391,18 +405,24 @@ const barbaInit = function () {
                 done();
             },
             async enter(data) {
+
                 contentAnimation();
+
             },
             async once(data) {
                 contentAnimation();
             }
         }]
-    })
+    });
+    // Barba.Dispatcher.on('newPageReady', function (current, prev, container) {
+    //     history.scrollRestoration = 'manual';
+    // });
+
 }
 
 function init() {
     navToggler()
-    sideNavGsap();
+    // sideNavGsap();
     if (document.body.id === "home") {
         particleJS();
         homeGsap();
