@@ -67,27 +67,27 @@ const buttonAnimations = function () {
     const button3 = document.querySelector('.button-3');
 
     const box = document.querySelector(".box");
-
+    box.style.transform = "translate(-50%, -2px)";
     button1.addEventListener('mouseenter', function () {
         box.style.transition = "0.3s ease-out";
         box.style.left = "0%";
-        box.style.transform = "translateX(0%)"
+        box.style.transform = "translate(0%, -2px)"
     })
     button1.addEventListener('mouseleave', function () {
         box.style.transition = "0.3s ease-out";
         box.style.left = "50%";
-        box.style.transform = "translateX(-50%)"
+        box.style.transform = "translate(-50%, -2px)"
     })
 
     button3.addEventListener('mouseenter', function () {
         box.style.transition = "0.3s ease-out";
         box.style.left = "100%";
-        box.style.transform = "translateX(-100%)"
+        box.style.transform = "translate(-100%, -2px)"
     })
     button3.addEventListener('mouseleave', function () {
         box.style.transition = "0.3s ease-out";
         box.style.left = "50%";
-        box.style.transform = "translateX(-50%)"
+        box.style.transform = "translate(-50%, -2px)"
     })
 
 

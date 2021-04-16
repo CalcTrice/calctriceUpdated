@@ -89,6 +89,8 @@ body::-webkit-scrollbar-thumb {
   :root {
     --fs-800: 6rem;
     --fs-700: 4.5rem;
+    --fs-600: 3.2rem;
+    --fs-500: 2.2rem;
     --fs-buttons: 1.4rem;
     --fs-anchors: 1.2rem;
   }
@@ -98,6 +100,30 @@ body::-webkit-scrollbar-thumb {
   :root {
     --fs-800: 4.5rem;
     --fs-700: 4rem;
+    --fs-600: 2.8rem;
+    --fs-500: 2rem;
+    --fs-buttons: 1.4rem;
+    --fs-anchors: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    --fs-800: 4rem;
+    --fs-700: 3rem;
+    --fs-600: 2.2rem;
+    --fs-500: 1.8rem;
+    --fs-buttons: 1.4rem;
+    --fs-anchors: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --fs-800: 3rem;
+    --fs-700: 2.6rem;
+    --fs-600: 2rem;
+    --fs-500: 1.6rem;
     --fs-buttons: 1.4rem;
     --fs-anchors: 1.2rem;
   }
@@ -887,28 +913,6 @@ nav.dark-nav div.logo {
   margin-right: 10px;
 }
 
-@-webkit-keyframes rotate-1 {
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
-@keyframes rotate-1 {
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-  0% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
 .section {
   width: 100%;
   min-height: 100vh;
@@ -916,7 +920,7 @@ nav.dark-nav div.logo {
 }
 
 .section-1 {
-  padding-top: 60px;
+  padding: 60px 0px;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -957,8 +961,8 @@ nav.dark-nav div.logo {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -2px);
+          transform: translate(-50%, -2px);
   width: 200px;
   height: 60px;
   border: 2px solid var(--clr-yellow-1);

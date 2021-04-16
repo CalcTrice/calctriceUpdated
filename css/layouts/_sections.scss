@@ -1,11 +1,4 @@
-@keyframes rotate-1{
-	0%{
-		transform: translate(0%, 0%);
-	}
-	0%{
-		transform: translate(0%, 0%);
-	}
-}
+
 
 .section {
 	width: 100%;
@@ -15,7 +8,7 @@
 }
 
 .section-1 {
-	padding-top: 60px;
+	padding: 60px 0px;
 	display: grid;
 	place-items: center;
 	position: relative;
@@ -46,7 +39,7 @@
 			position: absolute;
 			top: 0;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translate(-50%, -2px);
 			width: 200px;
 			height: 60px;
 			border: 2px solid var(--clr-yellow-1);
