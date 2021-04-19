@@ -1,4 +1,7 @@
 'use strict';
+
+// const { func } = require("assert-plus");
+
 // @ts-check
 window.onload = function () {
     document.body.style.opacity = '1';
@@ -242,7 +245,7 @@ const articlesCatalogueContentCreator = function () {
     const cardTemplateString = `  
     <div class="col-lg-12 col-xxl-6">
     <div class="articles-catalogue__display-card">
-        <a href="sample-article-page-1.html" class="article-link__card-overlay"></a>
+        <a href="" class="article-link__card-overlay"></a>
         <div class="row">
             <div class="col-1 col-md-1 d-flex align-items-center justify-content-center mar-top-bot-1">
                 <div class="number article-number"></div>
@@ -280,18 +283,21 @@ const articlesCatalogueContentCreator = function () {
             authors: ['Snigda Gupta'],
             topicsCovered: ['Finance', 'Business', 'Schooling'],
             dateTime: '17/04/21',
+            source: 'sample-article-page-1.html'
         },
         {
             heading: 'Economics notes PPC Part-2',
             authors: ['Snigda Gupta'],
             topicsCovered: ['Finance', 'Business', 'Schooling'],
             dateTime: '18/04/21',
+            source: 'sample-article-page-2.html'
         },
         {
             heading: 'Economics notes PPC Part-3',
             authors: ['Snigda Gupta'],
             topicsCovered: ['Finance', 'Business', 'Schooling'],
             dateTime: '19/04/21',
+            source: 'sample-article-page-1.html'
         },
 
     ];
@@ -304,6 +310,7 @@ const articlesCatalogueContentCreator = function () {
 
     articleCard.forEach(function (card, cardNumber) {
         if (cardNumber < articleData.length) {
+            card.querySelector('.article-link__card-overlay').href = `${articleData[cardNumber].source}`
             if (cardNumber < 9)
                 card.querySelector('.article-number').innerHTML = `0${cardNumber + 1}`;
             else

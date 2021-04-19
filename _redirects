@@ -1,0 +1,9 @@
+# for root
+/*              /index.html     200
+​
+# for the rest
+/articles-catalogue/*        /articles-src/articles-catalogue.html     200
+/sample-article-page-1/*        /articles-src/sample-article-page-1.html     200
+/sample-article-page-2/*        /articles-src/sample-article-page-2.html     200
+
+​
