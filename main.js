@@ -1,5 +1,7 @@
+'use strict';
+// @ts-check
 window.onload = function () {
-    document.body.style.opacity = 1;
+    document.body.style.opacity = '1';
     init();
 }
 const navToggler = function () {
@@ -14,7 +16,7 @@ const navToggler = function () {
     if (!tl.isActive())
         blurSlate.addEventListener('click', function () {
             navLinks.classList.remove('show');
-            tl.to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'right' })
+            tl.to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'left' })
         });
 
     if (!tl.isActive())
@@ -23,7 +25,7 @@ const navToggler = function () {
             tl
                 .from('.submenu-links ', { y: 50, opacity: 0, duration: 0.5, stagger: 0.15 })
                 .to('.blurSlate', { scaleX: 1, duration: 0.8, transformOrigin: 'left' }, "=-1")
-                .from('.blurSlate .info', { x: -200, opacity: 0, duration: 0.3 })
+                .from('.blurSlate .info', { x: -200, opacity: 0, duration: 0.3 }, "-=0.4");
 
 
 
@@ -35,7 +37,7 @@ const navToggler = function () {
             navLinks.classList.remove('show');
             tl
                 .fromTo('.blurSlate .info', { opacity: 1, duration: 0.2 }, { opacity: 0 }, "=-0.3")
-                .to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'left' })
+                .to('.blurSlate', { scaleX: 0, duration: .4, transformOrigin: 'left' }, "-=0.4")
                 .to('.blurSlate .info', { opacity: 1, duration: 0 })
 
             logo.style.transition = 'all 0.1s ease-out';
@@ -43,7 +45,36 @@ const navToggler = function () {
             // tl.reverse();
         });
 }
+const sideNavGsap = function () {
+    const navIcon = document.querySelector('.burger');
+    let tl = gsap.timeline();
 
+    navIcon.addEventListener('click', function () {
+        tl
+            .from('.submenu-links ', { y: 50, opacity: 0, duration: 0.5, stagger: 0.15 });
+
+    })
+}
+const navIntersection = function () {
+    const nav = document.querySelector('nav');
+    const section2 = document.querySelector('.section-2');
+    const section4 = document.querySelector('.section-4');
+
+    const obsCallback = function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting == true) {
+                console.log("Hello");
+                nav.classList.add('dark-nav');
+            }
+        })
+    }
+    const obsOptions = {
+        root: section4,
+        threshold: 0.7
+    }
+    const observer = new IntersectionObserver(obsCallback, obsOptions);
+    observer.observe(nav);
+}
 const homeGsap = function () {
 
     let tl = gsap.timeline({
@@ -55,7 +86,7 @@ const homeGsap = function () {
     })
     tl
         .to('h1 div', { opacity: 1, y: '0%', duration: 1, stagger: 0.2, ease: 'power4.out' }, '-=0.4')
-        .from('.CTA button', { y: '100%', opacity: 0, stagger: 0.1, duration: 0.5, ease: "bounce.out", stagger: 0.1 })
+        .from('.CTA button', { y: '100%', opacity: 0, stagger: 0.1, duration: 0.5, ease: "bounce.out" })
         .from('.box', { opacity: 0, duration: 0.5 }, "-=0.2")
         .from("canvas", { scale: 0, opacity: 0, duration: 0.5, ease: 'power.out' }, "-=0.5")
         .from('nav', { opacity: 0, duration: 0.2 })
@@ -167,36 +198,6 @@ const particleJS = function () {
     requestAnimationFrame(update);
 
 }
-const sideNavGsap = function () {
-    const navIcon = document.querySelector('.burger');
-    let tl = gsap.timeline();
-
-    navIcon.addEventListener('click', function () {
-        tl
-            .from('.submenu-links ', { y: 50, opacity: 0, duration: 0.5, stagger: 0.15 });
-
-    })
-}
-const navIntersection = function () {
-    const nav = document.querySelector('nav');
-    const section2 = document.querySelector('.section-2');
-    const section4 = document.querySelector('.section-4');
-
-    const obsCallback = function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting == true) {
-                console.log("Hello");
-                nav.classList.add('dark-nav');
-            }
-        })
-    }
-    const obsOptions = {
-        root: section4,
-        threshold: 0.7
-    }
-    const observer = new IntersectionObserver(obsCallback, obsOptions);
-    observer.observe(nav);
-}
 const carouselInit = function () {
 
     $('.testimonials-carousel').slick({
@@ -238,130 +239,85 @@ const carouselInit = function () {
 
 }
 const articlesCatalogueContentCreator = function () {
-    const cardTemplateString = `
+    const cardTemplateString = `  
     <div class="col-lg-12 col-xxl-6">
     <div class="articles-catalogue__display-card">
         <a href="sample-article-page-1.html" class="article-link__card-overlay"></a>
-        <div class="number article-number"></div>
-        <div class="article-title">
-            <h4></h4>
-        </div>
-        <div class="article-authors">
-            <p></p>
-        </div>
-        <div class="article-date">
-            <span class="date-time date"></span>
+        <div class="row">
+            <div class="col-1 col-md-1 d-flex align-items-center justify-content-center mar-top-bot-1">
+                <div class="number article-number"></div>
+            </div>
+            <div class="col-11 col-md-8 d-flex align-items-center mar-top-bot-1">
+                <div class="article-title">
+                    <h4></h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-2 d-flex align-items-center justify-content-end mar-top-bot-1">
+                <div class="article-authors">
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-12 col-md-1 d-flex align-items-center justify-content-end mar-top-bot-1">
+                <div class="article-date">
+                    <span class="date-time date"></span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-    
-    `
-    const articleData = [
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
+    `;  //Template HTML
+    const articleData = [  //Stores article metadata
+        /*  { TEMPLATE
+              heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+              authors: ['Yash Sonalia'],
+              topicsCovered: ['Finance', 'Business', 'Schooling'],
+              dateTime: '14/04/21',
+  
+          },*/
 
-        },
         {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            heading: 'Economics notes PPC Part-1',
             authors: ['Snigda Gupta'],
             topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
+            dateTime: '17/04/21',
         },
         {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia', 'Snigda Gupta'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia', 'Snigda Gupta', 'Adam West'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '15/04/21',
-
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            heading: 'Economics notes PPC Part-2',
             authors: ['Snigda Gupta'],
             topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
+            dateTime: '18/04/21',
         },
         {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia', 'Snigda Gupta'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia', 'Snigda Gupta', 'Adam West'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '15/04/21',
-
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
+            heading: 'Economics notes PPC Part-3',
             authors: ['Snigda Gupta'],
             topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
-
+            dateTime: '19/04/21',
         },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia', 'Snigda Gupta'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '14/04/21',
 
-        },
-        {
-            heading: '5 Ways to make more money online - Even if you’re just starting out Ways to make more money online - Even if you’re just starting out',
-            authors: ['Yash Sonalia', 'Snigda Gupta', 'Adam West'],
-            topicsCovered: ['Finance', 'Business', 'Schooling'],
-            dateTime: '15/04/21',
-
-        },
     ];
-    const dynamicCardAddition = document.querySelector('.dynamic-card-addition');
+    const dynamicCardAddition = document.querySelector('.dynamic-card-addition');  // DOM element for insertion
 
     articleData.forEach(function () {
         dynamicCardAddition.insertAdjacentHTML('beforeend', cardTemplateString);
     })
+    const articleCard = document.querySelectorAll('.articles-catalogue__display-card'); //Article Card
 
-    const articleCard = document.querySelectorAll('.articles-catalogue__display-card');
     articleCard.forEach(function (card, cardNumber) {
-        if (cardNumber < 9) card.querySelector('.article-number').innerHTML = `0${cardNumber + 1}`;
-        else card.querySelector('.article-number').innerHTML = `${cardNumber + 1}`;
+        if (cardNumber < articleData.length) {
+            if (cardNumber < 9)
+                card.querySelector('.article-number').innerHTML = `0${cardNumber + 1}`;
+            else
+                card.querySelector('.article-number').innerHTML = `${cardNumber + 1}`;
 
-        card.querySelector('.article-title h4').innerHTML = `${articleData[cardNumber].heading}`;
+            card.querySelector('.article-title h4').innerHTML = `${articleData[cardNumber].heading}`;
 
-        if (articleData[cardNumber].authors.length > 1) card.querySelector('.article-authors p').innerHTML = `${articleData[cardNumber].authors.length} Authors`;
-        else card.querySelector('.article-authors p').innerHTML = `${articleData[cardNumber].authors}`;
+            if (articleData[cardNumber].authors.length > 1)
+                card.querySelector('.article-authors p').innerHTML = `${articleData[cardNumber].authors.length} Authors`;
+            else
+                card.querySelector('.article-authors p').innerHTML = `${articleData[cardNumber].authors}`;
 
-        card.querySelector('.article-date .date').innerHTML = `${articleData[cardNumber].dateTime}`;
-
-
-
+            card.querySelector('.article-date .date').innerHTML = `${articleData[cardNumber].dateTime}`;
+        }
     })
 
 
@@ -414,12 +370,9 @@ const barbaInit = function () {
             }
         }]
     });
-    // Barba.Dispatcher.on('newPageReady', function (current, prev, container) {
-    //     history.scrollRestoration = 'manual';
-    // });
+
 
 }
-
 function init() {
     navToggler()
     // sideNavGsap();
@@ -436,4 +389,5 @@ function init() {
     if (document.body.id === 'barba')
         barbaInit();
 }
+
 

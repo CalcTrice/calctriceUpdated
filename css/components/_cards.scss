@@ -1,104 +1,98 @@
-.articles-catalogue__title-wrapper{
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+.articles-catalogue__title-wrapper {
+	margin-top: 10rem;
+	margin-bottom: 5rem;
 }
-.articles-catalogue__title-wrapper h6{
-    text-transform: uppercase;
-    text-align: left;
-    font-size: var(--fs-300);
+.articles-catalogue__title-wrapper h6 {
+	text-transform: uppercase;
+	text-align: left;
+	font-size: var(--fs-300);
 }
-.articles-catalogue__title-wrapper a{
-    color: var(--clr-black-1);
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: right;
-    font-size: var(--fs-buttons);
-    position: relative;
-    width: auto;
-    &::after{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: var(--clr-yellow-1);
-        height: 2px;
-        width: 30px;
-        transition: all 0.1s ease-out;
-    }
+.articles-catalogue__title-wrapper a {
+	color: var(--clr-black-1);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: right;
+	font-size: var(--fs-buttons);
+	position: relative;
+	width: auto;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: var(--clr-yellow-1);
+		height: 2px;
+		width: 30px;
+		transition: all 0.1s ease-out;
+	}
 
-    &:hover{
-        color: var(--clr-black-1);
-        &::after{
-            width: 100%;
-        }
-    }
+	&:hover {
+		color: var(--clr-black-1);
+		&::after {
+			width: 100%;
+		}
+	}
 }
-.articles-catalogue__display-card{
-    position: relative;
-    margin: 0.4rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
-    border: 1px solid var(--clr-black-1);
-    background-color: var(--clr-white-1);
-    box-shadow: 0px 0px 5px var(--clr-black-4);
-    overflow: hidden;
+.articles-catalogue__display-card {
+	position: relative;
+	margin: 0.4rem auto;
+	padding: 20px 30px;
+	border: 1px solid var(--clr-black-1);
+	background-color: var(--clr-white-1);
+	box-shadow: 0px 0px 5px var(--clr-black-4);
+	overflow: hidden;
 }
-.article-link__card-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    pad: 0px;
+.article-link__card-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	pad: 0px;
 }
-.article-number, .article-date{
-    flex:1;
+.article-number,
+.article-date {
 }
-.article-title{
-    flex: 8;
-    padding-left: 2.5rem;
+.article-title {
+	overflow: hidden;
+	padding: 0rem 0.8rem 0rem 0rem;
 }
-.article-authors{
-    flex: 2;
+.article-authors {
 }
-.article-title h4{
-    color: var(--clr-black-1);
-    font-size: var(--fs-200);
-    text-align: left;
-    font-weight: 500;
-   max-width: 65ch;
-    width: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
- 
+.article-title h4 {
+	color: var(--clr-black-1);
+	font-size: var(--fs-200);
+	text-align: left;
+	font-weight: 500;
+	// max-width: 65ch;
+	// width: auto;
+	// overflow: hidden;
+	// white-space: nowrap;
+	// text-overflow: ellipsis;
 }
-.article-authors p{
-    color: var(--clr-black-2);
-    font-size: var(--fs-100);
-    text-align: center;
-    font-weight: 500;
+.article-authors p {
+	color: var(--clr-black-2);
+	font-size: var(--fs-100);
+	text-align: center;
+	font-weight: 500;
 }
-.articles-catalogue__display-card{
-    transition:all 0.2s ease-out;
-    &:hover{
-        background-color: var(--clr-black-1);
-        transform: scale(1.1);
-        & .article-number{
-            background-color: var(--clr-white-1);
-        }
-        & .article-title h4{
-            color: var(--clr-white-1);
-        }
-        & .article-authors p{
-            color: var(--clr-white-2);
-        }
-        & .article-date .date-time{
-            color: var(--clr-white-2);
-        }
-    }
+.articles-catalogue__display-card {
+	transition: all 0.2s ease-out;
+	&:hover {
+		background-color: var(--clr-black-1);
+		transform: scale(1.1);
+		& .article-number {
+			background-color: var(--clr-white-1);
+		}
+		& .article-title h4 {
+			color: var(--clr-white-1);
+		}
+		& .article-authors p {
+			color: var(--clr-white-2);
+		}
+		& .article-date .date-time {
+			color: var(--clr-white-2);
+		}
+	}
 }

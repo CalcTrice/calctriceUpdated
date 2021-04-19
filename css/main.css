@@ -54,6 +54,14 @@ body::-webkit-scrollbar-thumb {
           box-sizing: border-box;
 }
 
+@supports (-webkit-font-smoothing: antialiased) and (-moz-osx-font-smoothing: grayscale) and (font-smooth: always) {
+  * {
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 .Container {
   width: 100%;
   height: auto;
@@ -102,6 +110,7 @@ body::-webkit-scrollbar-thumb {
     --fs-700: 4rem;
     --fs-600: 2.8rem;
     --fs-500: 2rem;
+    --fs-300: 1.8rem;
     --fs-buttons: 1.4rem;
     --fs-anchors: 1.2rem;
   }
@@ -113,7 +122,9 @@ body::-webkit-scrollbar-thumb {
     --fs-700: 3rem;
     --fs-600: 2.2rem;
     --fs-500: 1.8rem;
-    --fs-buttons: 1.4rem;
+    --fs-200: 1.4rem;
+    --fs-100: 1.3rem;
+    --fs-buttons: 1.3rem;
     --fs-anchors: 1.2rem;
   }
 }
@@ -301,6 +312,18 @@ sup {
   color: var(--clr-black-2);
 }
 
+.mar-top-1 {
+  margin-top: 0.5rem;
+}
+
+.mar-bot-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mar-top-bot-1 {
+  margin: 0.5rem 0rem;
+}
+
 button.button {
   color: var(--clr-black-1);
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -311,7 +334,7 @@ button.button {
   border: none;
   cursor: pointer;
   text-align: center;
-  width: 20rem;
+  width: 18.4rem;
   height: 5.6rem;
   padding-top: 0.2rem;
 }
@@ -479,17 +502,6 @@ button.button {
 .articles-catalogue__display-card {
   position: relative;
   margin: 0.4rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 20px 30px;
   border: 1px solid var(--clr-black-1);
   background-color: var(--clr-white-1);
@@ -508,23 +520,9 @@ button.button {
   pad: 0px;
 }
 
-.article-number, .article-date {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 .article-title {
-  -webkit-box-flex: 8;
-      -ms-flex: 8;
-          flex: 8;
-  padding-left: 2.5rem;
-}
-
-.article-authors {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  overflow: hidden;
+  padding: 0rem 0.8rem 0rem 0rem;
 }
 
 .article-title h4 {
@@ -532,11 +530,6 @@ button.button {
   font-size: var(--fs-200);
   text-align: left;
   font-weight: 500;
-  max-width: 65ch;
-  width: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .article-authors p {
