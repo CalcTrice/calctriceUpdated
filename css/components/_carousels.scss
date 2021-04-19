@@ -1,148 +1,139 @@
-
-.testimonials-carousel{
+.testimonials-carousel {
 	max-width: 500px;
 	width: auto;
 	margin: auto;
 	border-left: 1px solid var(--clr-black-3);
 	border-right: 1px solid var(--clr-black-3);
-
 }
-.item{
+.item {
 	outline: none;
 	margin: 30px 20px;
 	border: 1px solid #000000;
 	background-color: var(--clr-white-1);
 	padding: 3rem;
-	
 }
 
-.item h4{
+.item h4 {
 	color: var(--clr-black-1);
 	font-size: 1.8rem;
 	text-align: center;
 	font-weight: 500;
 	margin-bottom: 10px;
 }
-.item h6{
+.item h6 {
 	color: var(--clr-black-2);
 	font-size: 1.2rem;
 	text-align: center;
 	font-weight: 400;
 	margin-bottom: 80px;
-	
 }
-.item p{
+.item p {
 	color: var(--clr-black-1);
 	font-size: 1.2rem;
 	text-align: center;
 	font-weight: 300;
 }
 
-.item.slick-center{
+.item.slick-center {
 	transition: all 0.4s linear;
 	background-color: var(--clr-black-1);
 	transform: scale(1.1);
 	box-shadow: 0px 0px 16px var(--clr-black-4);
 }
 
-.item.slick-center h4{
+.item.slick-center h4 {
 	color: var(--clr-white-1);
 	font-size: 1.8rem;
 	text-align: center;
 	font-weight: 500;
 	margin-bottom: 10px;
 }
-.item.slick-center h6{
+.item.slick-center h6 {
 	color: var(--clr-white-2);
 	font-size: 1.2rem;
 	text-align: center;
 	font-weight: 400;
 	margin-bottom: 80px;
-	
 }
-.item.slick-center p{
+.item.slick-center p {
 	color: var(--clr-white-1);
 	font-size: 1.2rem;
 	text-align: center;
 	font-weight: 300;
 }
 .item.slick-slide {
-    display: none;
-    float: left;
-    height: auto ; 
-    min-height:250px ; 
+	display: none;
+	float: left;
+	height: auto;
+	min-height: 250px;
 }
 
-button.slick-next, button.slick-prev {
-    font-size: 0;
-    line-height: 0;
-    position: absolute;
+button.slick-next,
+button.slick-prev {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
 	z-index: 10;
-    top: 50%;
-    display: block;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    transform: translate(0,-50%);
-    cursor: pointer;
-    color: transparent;
-    border: none;
-    outline: 0;
-    background-color: transparent;
+	top: 50%;
+	display: block;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: 0;
+	background-color: transparent;
 	transition: all 0.1s ease-out;
 	border-radius: 50%;
-	&:hover{
+	&:hover {
 		background-color: var(--clr-yellow-1);
 	}
 }
 
-button.slick-next.slick-arrow{
+button.slick-next.slick-arrow {
 	background-image: none;
 	display: none;
 	display: block;
-	background-image: url(../../assets/rightChevron.svg);
+	background-image: url(../assets/rightChevron.svg);
 	background-size: 20px;
 	background-position: 39% center;
 	background-repeat: no-repeat;
 	right: -70px;
 }
 
-button.slick-prev.slick-arrow{
+button.slick-prev.slick-arrow {
 	background-image: none;
 	display: none;
 	display: block;
-	background-image: url(../../assets/leftChevron.svg);
+	background-image: url(../assets/leftChevron.svg);
 	background-size: 13.33px;
 	background-position: 49% center;
 	background-repeat: no-repeat;
 	left: -70px;
 }
 
-button.slick-prev.slick-arrow::before,button.slick-next.slick-arrow::before{
+button.slick-prev.slick-arrow::before,
+button.slick-next.slick-arrow::before {
 	content: "";
 }
-.slick-dots li button{
-	&::before{
-
+.slick-dots li button {
+	&::before {
 		transition: all 0.2s ease-out;
 	}
-
 }
-.slick-dots li.slick-active button{
-	
-	&::before{
+.slick-dots li.slick-active button {
+	&::before {
 		transition: all 0.2s ease-out;
 		transform: translateY(-50%) scale(1.2);
 		color: var(--clr-yellow-1) !important;
 	}
-	
 }
-.slick-dots li button{
-	
-	&:hover{
-		&::before{
+.slick-dots li button {
+	&:hover {
+		&::before {
 			color: var(--clr-yellow-2) !important;
 		}
 	}
-	
 }

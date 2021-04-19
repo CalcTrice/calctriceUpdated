@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CalcTrice</title>
+		<link rel="stylesheet" href="2b9da46e489fb7a2af538c8d32e7582c">
+		<link rel="stylesheet" href="b0ffb7b017142ea96eff0acd93b6dde3">
+		<link rel="stylesheet" href="5ebb6bb4ee89648b5d47dc182f6c7a8f" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+		<link rel="stylesheet" href="5f0646cb2ede11ee79bc7f69626acf00" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous">
+		<link rel="stylesheet" href="ae1636ef4a79a3b61900d7422f951c6d" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous">
+		<script src="7b009997f15fe876145d71fd82bc4baf"></script>
+		<script src="4dec313db66fc2ee2c836494a00289b1"></script>
+		<script src="b05d65e6944ab4d2b947164825e3e54f"></script>
+		<script src="0033803ec3dc058ed8af725712048552"></script>
+		<script defer="" src="b4070f014ae7b3326408565e5bfd0096"></script>
+	</head>
+	<body id="home">
+		<nav class="">
+			<div class="blurSlate">
+				<div class="info">
+					<h3 class="blurSlateLogo" onclick="window.location.href='index.html'">CalcTrice<sup>©</sup></h3>
+					<p class="blurSlateSub">Follow us at:</p>
+					<div class="social-links">
+						<a class="instagram-link" href="14824b8f5cc62b8a8b4e540cd2a6d35a"><i class="fab fa-instagram"></i></a>
+						<a class="facebook-link" href="#"><i class="fab fa-facebook-f"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="logo" onclick="window.location.href='index.html'">CalcTrice<sup>©</sup></div>
+			<ul class="nav-links">
+				<li class="submenu-links">
+					<h6>Calculator Tutorials</h6>
+					<ul class="submenu">
+						<li><a href="#">Instructions</a></li>
+						<li><a href="#">Videos</a></li>
+					</ul>
+				</li>
+				<li class="submenu-links">
+					<h6>Article Submissions</h6>
+					<ul class="submenu">
+						<li><a href="#">Procedure</a></li>
+						<li><a href="#">Submission Fields</a></li>
+					</ul>
+				</li>
+				<li class="submenu-links">
+					<h6>Work with us</h6>
+					<ul class="submenu">
+						<li><a href="#">Content Writer</a></li>
+						<li><a href="#">Consultant</a></li>
+						<li><a href="#">Developer</a></li>
+						<li><a href="#">Public Relations</a></li>
+					</ul>
+				</li>
+				<li class="submenu-links">
+					<h6>Our Programmes</h6>
+					<ul class="submenu">
+						<li><a href="#">Internship</a></li>
+						<li><a href="#">Apprenticeship</a></li>
+						<li><a href="#">Partnership</a></li>
+					</ul>
+				</li>
+				<li class="submenu-links">
+					<h6>You can help us by</h6>
+					<ul class="submenu">
+						<li><a href="#">Donating</a></li>
+						<li><a href="#">Develop new formulae</a></li>
+						<li><a href="#">Others</a></li>
+					</ul>
+				</li>
+				<li class="close-nav">
+					<img src="4a10f620a9ed73b29a1e5e5d81a1d934" alt="">
+				</li>
+			</ul>
+			<div class="burger" href="#">
+				<img src="11bff5f05834b615e95bb53f41560d1f" alt="">
+			</div>
+		</nav>
+		<div class="Container">
+			<section class="section section-1" id="landingSection">
+				<h1>
+					<div class="regular">Making complex</div>
+					<div class="regular">Calculations</div>
+					<div class="regular">Easy,</div>
+					<div class="regular">For You.</div>
+				</h1>
+				<div class="CTA row">
+					<div class="box"></div>
+					<div class="col-md-4 col-sm-12 d-flex justify-content-center">
+						<button class="button button-1" onclick="window.location.href='articles-src/articles-catalogue.html'">
+							Read some articles
+						</button>
+					</div>
+					<div class="col-md-4 col-sm-12 d-flex justify-content-center">
+						<button class="button button-2">Jump to calculator</button>
+					</div>
+					<div class="col-md-4 col-sm-12 d-flex justify-content-center">
+						<button class="button button-3">Contact us bruh</button>
+					</div>
+				</div>
+			</section>
+			<hr>
+			<section class="section section-2">
+				<span class="circle-1"></span>
+				<span class="circle-2"></span>
+				<div class="heading">
+					<h2>What we Do</h2>
+				</div>
+
+				<div class="what-we-do-accordion accordion accordion-flush" id="accordionFlushExample">
+					<hr>
+					<div class="accordion-item" id="service-1">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+							<div class="number accordian-number">01</div>
+							<div class="accordian-header">
+								<h3>All-Purpose Calculation Tool</h3>
+								<h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+							</div>
+						</button>
+						<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							<div class="row accordion-body">
+								<div class="col-md-3">
+									<div class="illustration"></div>
+								</div>
+								<div class="col-md-9">
+									<div class="description">
+										<p>
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio illo possimus mollitia. Nam dolorum, eius
+											ab quibusdam incidunt numquam quod rem iusto magnam! Ad nostrum voluptate, accusamus adipisci aliquid
+											culpa! Reprehenderit necessitatibus atque dignissimos odio minus excepturi est cumque adipisci quasi eaque
+											veniam reiciendis sit nemo recusandae voluptatum, hic vitae natus minima, possimus dolorum harum
+											consequatur voluptatem repellat veritatis! Dolorem! Doloremque reprehenderit dolorum enim cupiditate id
+											iure voluptatibus. Dignissimos ipsum eligendi exercitationem at minima laborum. Quae iusto repudiandae
+											labore in adipisci debitis maiores, necessitatibus cum? Quasi eius iste quas id!
+										</p>
+										<button class="button button--minor-action-button">See All Tools!</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="accordion-item" id="service-2">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+							<div class="number accordian-number">02</div>
+							<div class="accordian-header">
+								<h3>Financial Consultancy</h3>
+								<h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+							</div>
+						</button>
+						<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								<div class="illustration"></div>
+								<div class="description">
+									<p>
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio illo possimus mollitia. Nam dolorum, eius ab
+										quibusdam incidunt numquam quod rem iusto magnam! Ad nostrum voluptate, accusamus adipisci aliquid culpa!
+										Reprehenderit necessitatibus atque dignissimos odio minus excepturi est cumque adipisci quasi eaque veniam
+										reiciendis sit nemo recusandae voluptatum, hic vitae natus minima, possimus dolorum harum consequatur
+										voluptatem repellat veritatis! Dolorem! Doloremque reprehenderit dolorum enim cupiditate id iure voluptatibus.
+										Dignissimos ipsum eligendi exercitationem at minima laborum. Quae iusto repudiandae labore in adipisci debitis
+										maiores, necessitatibus cum? Quasi eius iste quas id!
+									</p>
+									<button class="button button--minor-action-button">Get Professional Consultancy!</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="accordion-item" id="service-3">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+							<div class="number accordian-number">03</div>
+							<div class="accordian-header">
+								<h3>Weekly articles on finance</h3>
+								<h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
+							</div>
+						</button>
+						<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								<div class="illustration"></div>
+								<div class="description">
+									<p>
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio illo possimus mollitia. Nam dolorum, eius ab
+										quibusdam incidunt numquam quod rem iusto magnam! Ad nostrum voluptate, accusamus adipisci aliquid culpa!
+										Reprehenderit necessitatibus atque dignissimos odio minus excepturi est cumque adipisci quasi eaque veniam
+										reiciendis sit nemo recusandae voluptatum, hic vitae natus minima, possimus dolorum harum consequatur
+										voluptatem repellat veritatis! Dolorem! Doloremque reprehenderit dolorum enim cupiditate id iure voluptatibus.
+										Dignissimos ipsum eligendi exercitationem at minima laborum. Quae iusto repudiandae labore in adipisci debitis
+										maiores, necessitatibus cum? Quasi eius iste quas id!
+									</p>
+									<button class="button button--minor-action-button">Read Articles Now!</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+				</div>
+			</section>
+			<section class="section section-3">
+				<div class="heading">
+					<h2>Testimonials</h2>
+					<h5>Let's see what our users say!</h5>
+				</div>
+				<div class="testimonials-container container-fluid">
+					<div class="row">
+						<div class="col-md-3 col-sm-0"></div>
+						<div class="col-md-6 col-sm-12">
+							<div class="testimonials-carousel">
+								<div class="item">
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi
+										eaque saepe fugit.
+									</p>
+								</div>
+								<div class="item">
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi
+										eaque saepe fugit.
+									</p>
+								</div>
+								<div class="item">
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi
+										eaque saepe fugit.
+									</p>
+								</div>
+								<div class="item">
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi
+										eaque saepe fugit.
+									</p>
+								</div>
+								<div class="item">
+									<h4>"Great Collection Of Tools"</h4>
+									<h6>John West</h6>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eos omnis in. Accusantium ea molestiae autem animi
+										eaque saepe fugit.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-0"></div>
+					</div>
+				</div>
+			</section>
+			<section class="section section-4"></section>
+		</div>
+		<footer class="footer footer-landing">
+			<ul>
+				<li><a href="#">Terms &amp; Conditions</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+			<p>Owned by CalcTrice<sup>©</sup> 2021</p>
+		</footer>
+		<script src="5fcc2851f8d3cda2304b9b630a93bec8" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script async="" src="32a5427761e9e1b4de154d6c6e65d1be" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+		<script src="89d4e69003714eed922360f5931e6cee"></script>
+	</body>
+</html>

@@ -645,7 +645,8 @@ button.button {
   min-height: 250px;
 }
 
-button.slick-next, button.slick-prev {
+button.slick-next,
+button.slick-prev {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -667,7 +668,8 @@ button.slick-next, button.slick-prev {
   border-radius: 50%;
 }
 
-button.slick-next:hover, button.slick-prev:hover {
+button.slick-next:hover,
+button.slick-prev:hover {
   background-color: var(--clr-yellow-1);
 }
 
@@ -675,7 +677,7 @@ button.slick-next.slick-arrow {
   background-image: none;
   display: none;
   display: block;
-  background-image: url(../../assets/rightChevron.svg);
+  background-image: url(../assets/rightChevron.svg);
   background-size: 20px;
   background-position: 39% center;
   background-repeat: no-repeat;
@@ -686,14 +688,15 @@ button.slick-prev.slick-arrow {
   background-image: none;
   display: none;
   display: block;
-  background-image: url(../../assets/leftChevron.svg);
+  background-image: url(../assets/leftChevron.svg);
   background-size: 13.33px;
   background-position: 49% center;
   background-repeat: no-repeat;
   left: -70px;
 }
 
-button.slick-prev.slick-arrow::before, button.slick-next.slick-arrow::before {
+button.slick-prev.slick-arrow::before,
+button.slick-next.slick-arrow::before {
   content: "";
 }
 
